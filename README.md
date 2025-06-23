@@ -68,9 +68,9 @@ Based on the above permissions, we will use wa-st's original work under the orig
 - Modifications
   - Pak128.Japan-Ex+Addons Team
 
-`ground/gobanboshi`以下のPNGファイルとdattファイルは、五番星氏の「俺得!日本伝統色地表セット」(http://gobanboshi.s25.xrea.com/simutrans/main.html)に改造を加えたものです。
+`ground/gobanboshi`以下のPNGファイルとdattファイルは、五番星氏の[俺得!日本伝統色地表セット](http://gobanboshi.s25.xrea.com/simutrans/main.html)に改造を加えたものです。
 
-The PNG and datt files under `ground/gobanboshi` are modified versions of Gobanboshi's "My Personal Favorite! Traditional Japanese Color Ground Set" (http://gobanboshi.s25.xrea.com/simutrans/main.html).
+The PNG files and datt files located under `ground/gobanboshi` are modified versions of Gobanboshi's [My Personal Japanese Traditional Color Ground Set](http://gobanboshi.s25.xrea.com/simutrans/main.html).
 
 > 配布物のなかにはソース(png,dat等)を公開しているものがありますが、改造につきましては、私が手がけた部分に限り、特に制限を設けることはございません。ご自由にお願いいたします。
 >
