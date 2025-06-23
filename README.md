@@ -53,9 +53,9 @@ Under the above permissions, we will use yoshi's original work under the origina
 - Modifications
   - Pak128.Japan-Ex+Addons Team
 
-`scripts/datt.rb`ファイルは、[pak.nippon](https://github.com/wa-st/pak-nippon)を元に改造したものです。これらのファイルはMITライセンスに基づいて配布されています。詳細なライセンス条項については、[README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md)をご参照ください。
+`scripts/datt.rb`ファイルは、[pak.nippon](https://github.com/wa-st/pak-nippon)を元に改造したものです。元作品はMITライセンスに基づいて配布されています。詳細なライセンス条項については、[README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md)をご参照ください。
 
-The `scripts/datt.rb` files are modified versions of [pak.nippon](https://github.com/wa-st/pak-nippon). These files are distributed under the MIT License. For detailed license terms, please refer to the [README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md) file.
+The `scripts/datt.rb` file is a modified version of [pak.nippon](https://github.com/wa-st/pak-nippon). The original work is distributed under the MIT License. For detailed licensing terms, please refer to the [README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md) file.
 
 wa-st氏が作成した元作品を元作者の条件のもとで利用し、改造部分のみを [CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
 
