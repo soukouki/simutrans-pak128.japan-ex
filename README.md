@@ -90,3 +90,9 @@ Based on the above permission, we use Gobanboshi's original work under the origi
 `makeobj` ディレクトリに含まれる実行ファイルは、[Simutrans-Extended](https://github.com/jamespetts/simutrans-extended)のソースコードを改変せずにビルドしたものです。本実行ファイルは Artistic License に従って配布されます。詳細なライセンス条項については、[LICENSE.txt](https://github.com/jamespetts/simutrans-extended/blob/4dab37b/LICENSE.txt)をご参照ください。
 
 The executable files found in the `makeobj` directory are built from the [Simutrans-Extended](https://github.com/jamespetts/simutrans-extended) source code without modification. This executable is distributed under the terms of the Artistic License. For the full license text, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-extended/blob/4dab37b/LICENSE.txt).
+
+## Credit
+
+- Pak128.Japan-Ex+Addons Team
+  - sou7
+  - Physka
