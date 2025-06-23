@@ -1,0 +1,7 @@
+Obj=ground
+Name=SlopeTrans
+copyright=yoshi
+Image[0][0]=slopetrans.0.0
+Image[1][0]=slopetrans.0.1
+Image[2][0]=slopetrans.0.2
+Image[3][0]=slopetrans.0.3
