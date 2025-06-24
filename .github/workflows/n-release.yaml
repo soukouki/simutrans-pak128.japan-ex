@@ -138,3 +138,21 @@ jobs:
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 古いリリースを削除（最新3つを残す）
+      - name: Delete old releases
+        run: |
+          # GitHub APIを使用してnで始まるリリースを取得
+          releases=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/releases" | \
+            jq -r '.[] | select(.tag_name | startswith("n")) | .id' | \
+            head -n -3)
+          
+          # 古いリリースを削除
+          for release_id in $releases; do
+            if [ ! -z "$release_id" ]; then
+              echo "Deleting release ID: $release_id"
+              curl -s -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/repos/${{ github.repository }}/releases/$release_id"
+            fi
+          done
