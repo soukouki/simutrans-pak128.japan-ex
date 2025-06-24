@@ -111,9 +111,14 @@ class Make
         #{version}
 
         バージョンの説明:
-        v1.2.3: リリースバージョン
-        n123: 開発中のバージョン(CIによるビルド)
-        dev: 開発中のバージョン(ローカルビルド)
+        v1.2.3 : リリースバージョン
+        n123   : 開発中のバージョン(CDによるビルド)
+        dev    : 開発中のバージョン(ローカルビルド)
+
+        Version Description:
+        v1.2.3 : Released version
+        n123   : Development version (built via CD)
+        dev    : Development version (local build)
       EOS
     end
   end
