@@ -16,9 +16,9 @@ Unless otherwise noted, the files created by the Pak128.Japan-Ex+Addons team are
 
 - Original work
   - The Simutrans Team(since 2004)
-  - Pak128.Britain-Ex Team
+  - The Pak128.Britain-Ex Team
 - Modifications
-  - Pak128.Japan-Ex+Addons Team
+  - The Pak128.Japan-Ex+Addons Team
 
 `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `ways/128britain-ex`以下のPNGファイルとdattファイルと、`config`以下のtabファイルは、[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)を元に改造したものです。これらのファイルは Artistic License に基づいて配布されています。詳細なライセンス条項については、[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)をご参照ください。
 
@@ -33,7 +33,7 @@ Under the above permissions, we will use the original work created by the Pak128
 - Original work
   - yoshi
 - Modifications
-  - Pak128.Japan-Ex+Addons Team
+  - The Pak128.Japan-Ex+Addons Team
 
 `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`以下のpngファイルとdattファイルは、[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)を元に改造したものです。
 
@@ -51,7 +51,7 @@ Under the above permissions, we will use yoshi's original work under the origina
 - Original work
   - wa-st
 - Modifications
-  - Pak128.Japan-Ex+Addons Team
+  - The Pak128.Japan-Ex+Addons Team
 
 `scripts/datt.rb`ファイルは、[pak.nippon](https://github.com/wa-st/pak-nippon)を元に改造したものです。元作品はMITライセンスに基づいて配布されています。詳細なライセンス条項については、[README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md)をご参照ください。
 
@@ -66,7 +66,7 @@ Based on the above permissions, we will use wa-st's original work under the orig
 - Original work
   - 五番星(Gobanboshi)
 - Modifications
-  - Pak128.Japan-Ex+Addons Team
+  - The Pak128.Japan-Ex+Addons Team
 
 `ground/gobanboshi`以下のPNGファイルとdattファイルは、五番星氏の[俺得!日本伝統色地表セット](http://gobanboshi.s25.xrea.com/simutrans/main.html)に改造を加えたものです。
 
@@ -93,6 +93,6 @@ The executable files found in the `makeobj` directory are built from the [Simutr
 
 ## Credit
 
-- Pak128.Japan-Ex+Addons Team
+- The Pak128.Japan-Ex+Addons Team
   - sou7
   - Physka
