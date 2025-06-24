@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  # mainへのPR時と、mainへのpush時にCIを実行
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  ruby-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # リポジトリをチェックアウト
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # libpng15のキャッシュをチェック
+      - name: Cache libpng15
+        id: cache-libpng15
+        uses: actions/cache@v3
+        with:
+          path: ~/libpng15-install
+          key: libpng15-1.5.30-${{ runner.os }}
+          restore-keys: |
+            libpng15-1.5.30-
+
+      # libpng15をソースからビルド（キャッシュが無い場合のみ）
+      - name: Build libpng15 from source
+        if: steps.cache-libpng15.outputs.cache-hit != 'true'
+        run: |
+          # 必要なツールをインストール
+          sudo apt update
+          sudo apt install -y build-essential zlib1g-dev
+
+          # 作業ディレクトリを作成
+          mkdir -p ~/build && cd ~/build
+
+          # libpng 1.5.30をダウンロード
+          wget https://download.sourceforge.net/libpng/libpng-1.5.30.tar.gz
+          tar -xzf libpng-1.5.30.tar.gz
+          cd libpng-1.5.30
+
+          # ホームディレクトリ内のプレフィックスでコンパイル
+          ./configure --prefix=$HOME/libpng15-install
+          make -j$(nproc)
+          make install
+
+      # libpng15をシステムにインストール
+      - name: Install libpng15 to system
+        run: |
+          # キャッシュされたファイルまたは新しくビルドしたファイルをシステムにコピー
+          sudo cp -r ~/libpng15-install/lib/* /usr/local/lib/
+          sudo cp -r ~/libpng15-install/include/* /usr/local/include/
+          
+          # システムライブラリパスにシンボリックリンクを作成
+          sudo ln -sf /usr/local/lib/libpng15.so.15 /usr/lib/x86_64-linux-gnu/libpng15.so.15
+          sudo ln -sf /usr/local/lib/libpng15.so /usr/lib/x86_64-linux-gnu/libpng15.so
+          
+          # ldcacheを更新
+          sudo ldconfig
+          
+          # インストール確認
+          ldconfig -p | grep libpng15
+
+      # Rubyをセットアップ
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3 # Windowsユーザーも居るので、最新版の3.4ではなく、少し古いバージョンを指定しておく
+
+      # Rubyコマンドを実行
+      - name: Run Ruby commands
+        run: |
+          ruby scripts/make.rb all

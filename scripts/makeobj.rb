@@ -40,8 +40,13 @@ class Makeobj
           '   Reading file ',
           '      packing ',
         ]
-        puts line.chomp if calm_prefix.all?{|prefix| !line.start_with?(prefix) }
+        puts line.chomp if calm_prefix.all? { |prefix| !line.start_with?(prefix) }
       end
+    end
+
+    # プロセスの終了ステータスを確認
+    if !$?.success?
+      raise "makeobj failed with exit code #{$?.exitstatus}"
     end
   end
 end
