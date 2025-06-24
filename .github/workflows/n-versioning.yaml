@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # リポジトリをチェックアウト
+      # リポジトリをチェックアウト（全ての履歴とタグを取得）
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       # libpng15のキャッシュをチェック
       - name: Cache libpng15
@@ -62,6 +64,10 @@ jobs:
           # インストール確認
           ldconfig -p | grep libpng15
 
+      # 全てのタグを取得（fetch-depth: 0が必要）
+      - name: Fetch all tags
+        run: git fetch --tags
+
       # 最新のnで始まるタグを取得(無い場合はn0とする)
       - name: Get latest version tag
         id: get_latest_tag
@@ -69,17 +75,21 @@ jobs:
           latest_tag=$(git tag --list 'n*' --sort=-v:refname | head -n 1)
           if [ -z "$latest_tag" ]; then
             echo "latest_tag=n0" >> $GITHUB_ENV
+            echo "latest_number=0" >> $GITHUB_ENV
           else
             echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+            latest_number=${latest_tag#n}
+            echo "latest_number=$latest_number" >> $GITHUB_ENV
           fi
 
       # 新しいバージョンを計算
       - name: Calculate new version
         id: calculate_version
         run: |
-          latest_number=${{ env.latest_tag#n }}
           new_number=$((latest_number + 1))
           echo "new_tag=n$new_number" >> $GITHUB_ENV
+        env:
+          latest_number: ${{ env.latest_number }}
 
       # 新しいタグを作成してプッシュ
       - name: Create and push new tag
