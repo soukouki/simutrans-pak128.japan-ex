@@ -142,17 +142,35 @@ jobs:
       # 古いリリースを削除（最新3つを残す）
       - name: Delete old releases
         run: |
-          # GitHub APIを使用してnで始まるリリースを取得
-          releases=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          # GitHub APIを使用してnで始まるリリースを取得し、デバッグ情報を出力
+          echo "Fetching all n* releases..."
+          all_releases=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases" | \
-            jq -r '.[] | select(.tag_name | startswith("n")) | .id' | \
-            head -n -3)
+            jq -r '.[] | select(.tag_name | startswith("n")) | "\(.id):\(.tag_name)"')
           
-          # 古いリリースを削除
-          for release_id in $releases; do
-            if [ ! -z "$release_id" ]; then
-              echo "Deleting release ID: $release_id"
-              curl -s -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                "https://api.github.com/repos/${{ github.repository }}/releases/$release_id"
-            fi
-          done
+          echo "All n* releases (ID:TAG):"
+          echo "$all_releases"
+          
+          # リリース数をカウント
+          release_count=$(echo "$all_releases" | wc -l)
+          echo "Total n* releases: $release_count"
+          
+          if [ "$release_count" -gt 3 ]; then
+            # 古いリリースのIDを取得（最新3つを除く）
+            old_releases=$(echo "$all_releases" | tail -n +4 | cut -d: -f1)
+            
+            echo "Releases to delete:"
+            echo "$old_releases"
+            
+            # 古いリリースを削除
+            for release_id in $old_releases; do
+              if [ ! -z "$release_id" ]; then
+                echo "Deleting release ID: $release_id"
+                curl -s -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                  "https://api.github.com/repos/${{ github.repository }}/releases/$release_id"
+                echo "Deleted release ID: $release_id"
+              fi
+            done
+          else
+            echo "Only $release_count n* releases found. No deletion needed (keeping all as count <= 3)."
+          fi
