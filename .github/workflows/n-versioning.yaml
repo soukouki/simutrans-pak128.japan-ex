@@ -8,6 +8,8 @@ on:
 jobs:
   create-version-tag:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       # リポジトリをチェックアウト（全ての履歴とタグを取得）
