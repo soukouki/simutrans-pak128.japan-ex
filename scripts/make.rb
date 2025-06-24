@@ -42,6 +42,8 @@ class Make
         makeobj()
       when 'copy_config'
         copy_config()
+      when 'version'
+        version()
       when 'clean'
         clean()
       when 'help', nil
@@ -63,10 +65,11 @@ class Make
     makedat()
     makeobj()
     copy_config()
+    version()
   end
 
+  # makedatを実行
   def makedat
-    # makedatを実行
     makedat = MakeDat.new
     Dir.glob('**/*.datt').each do |file|
       puts "Processing #{file}"
@@ -74,9 +77,9 @@ class Make
     end
   end
 
+  # makeobjを実行
+  # 出力はPak128.Japan-Ex+Addons/以下に作成する
   def makeobj
-    # makeobjを実行
-    # 出力はPak128.Japan-Ex+Addons/以下に作成する
     makeobj = Makeobj.new
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons')
     PAK_DIRS.each do |dir, size|
@@ -88,12 +91,30 @@ class Make
     end
   end
 
+  # config以下のファイルをPak128.Japan-Ex+Addons/config/にコピー
   def copy_config
-    # config以下のファイルをPak128.Japan-Ex+Addons/config/にコピー
     puts "Copying config files"
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons/config')
     Dir.glob('config/*').each do |file|
       FileUtils.cp(file, 'Pak128.Japan-Ex+Addons/config/')
+    end
+  end
+
+  # 環境変数VERSIONを見て、Pak128.Japan-Ex+Addons/version.txtを作成する
+  # もしVERSIONが設定されていなければ、"dev"を指定する
+  def version
+    version = ENV['VERSION'] || 'dev'
+    puts "Creating version file with version: #{version}"
+    FileUtils.mkdir_p('Pak128.Japan-Ex+Addons')
+    File.open('Pak128.Japan-Ex+Addons/version.txt', 'w') do |file|
+      file.puts <<~EOS
+        #{version}
+
+        バージョンの説明:
+        v1.2.3: リリースバージョン
+        n123: 開発中のバージョン(CIによるビルド)
+        dev: 開発中のバージョン(ローカルビルド)
+      EOS
     end
   end
 
