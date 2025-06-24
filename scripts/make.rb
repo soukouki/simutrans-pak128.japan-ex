@@ -121,9 +121,15 @@ class Make
   def clean
     puts "Cleaning up created files..."
     # datファイルは同名のdattファイルがある場合のみ削除する
+    # .dattファイルが無い場合、警告メッセージを出力する
     Dir.glob('**/*.dat').each do |file|
       datt_file = file.sub(/\.dat$/, '.datt')
-      FileUtils.rm(file) if File.exist?(datt_file)
+      if File.exist?(datt_file)
+        puts "Removing #{file}"
+        FileUtils.rm(file)
+      else
+        puts "Warning: No corresponding .datt file for #{file}, skipping deletion."
+      end
     end
     FileUtils.rm_rf(Dir.glob('**/*.pak'))
     FileUtils.rm_rf('Pak128.Japan-Ex+Addons')
