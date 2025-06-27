@@ -6,7 +6,7 @@ on:
       - 'v*.*.*' # v?.?.?形式のタグが付けられたときにトリガー
 
 jobs:
-  deploy:
+  v-release:
     runs-on: ubuntu-latest
 
     steps:
