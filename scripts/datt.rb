@@ -18,9 +18,9 @@ begin
   require 'rubyXL'
 rescue LoadError => e
   $stderr.puts <<~EOS
-    excel gem is not installed.
+    rubyXL is not installed.
     Please install it with: gem install rubyXL
-    excelというgemがインストールされていません。
+    rubyXLがインストールされていません。
     インストールするには、次のコマンドを実行してください。: gem install rubyXL
   EOS
   raise e
