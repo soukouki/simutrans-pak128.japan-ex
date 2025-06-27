@@ -80,6 +80,25 @@ The PNG files and datt files located under `ground/gobanboshi` are modified vers
 
 Based on the above permission, we use Gobanboshi's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
 
+### kururi
+
+- Original work
+  - 久留里(kururi)
+- Modifications
+  - The Pak128.Japan-Ex+Addons Team
+
+`menu/kururi`以下のPNGファイルとdattファイルは、久留里氏の[ぼくのかんがえたさいきょうのメニューアイコン](https://wikiwiki.jp/twitrans/addon/recycle)に改造を加えたものです。
+
+The PNG files and datt files located under `menu/kururi` are modified versions of Kururi's [My Concept of the Ultimate Menu Icons](https://wikiwiki.jp/twitrans/addon/recycle).
+
+> 全ての権利を破棄しています。「readme」ファイルに記載された権利関係の内容は、全て無視してください。
+>
+> https://wikiwiki.jp/twitrans/addon/recycle
+
+私達は上記の許諾に基づき、久留里氏が作成した元作品を元作者の条件のもとで利用し、改造部分のみを [CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
+
+Based on the above permission, we use Kururi's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
+
 ### makeobj
 
 - Authors
