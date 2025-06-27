@@ -78,9 +78,32 @@ class Make
   def makedat
     makedat = MakeDat.new
     Dir.glob('**/*.datt').each do |file|
-      puts "Processing #{file}"
+      dat_file = file.sub(/\.datt$/, '.dat')
+      # 依存ファイルを取得し、datファイルよりも新しいものがあれば再生成する
+      dependencies = makedat_dependencies(file)
+      dat_mtime = File.exist?(dat_file) ? File.mtime(dat_file) : Time.at(0) # datファイルが存在しない場合は1970年1月1日を基準とする
+      next if dependencies.all? { |dep| File.exist?(dep) && File.mtime(dep) <= dat_mtime }
+      puts "Creating dat file for #{file}"
       makedat.create_dat(file)
     end
+  end
+
+  # datファイルの依存関係を取得する
+  # %requireや%require_excelで指定されたファイルを再帰的に取得する
+  def makedat_dependencies(datt_file)
+    dependencies = [datt_file]
+    File.open(datt_file, 'r') do |file|
+      file.each_line do |line|
+        if line =~ /^%require\s+['"](.*)['"]/
+          require_file = File.expand_path($1, File.dirname(datt_file))
+          dependencies += makedat_dependencies(require_file)
+        elsif line =~ /^%require_excel\s+['"](.*)['"]/
+          require_file = File.expand_path($1, File.dirname(datt_file))
+          dependencies << require_file
+        end
+      end
+    end
+    dependencies.uniq
   end
 
   # makeobjを実行
@@ -92,6 +115,11 @@ class Make
     queue = Queue.new
     PAK_DIRS_HASH.each do |dir, size|
       Dir.glob("#{dir}/**/*.dat").each do |file|
+        pak_file = 'Pak128.Japan-Ex+Addons/' + File.basename(file, '.dat') + '.pak'
+        # pakファイルが存在しない、またはdatファイルよりも新しい場合のみ処理する
+        dependencies = makeobj_dependencies(file)
+        pak_mtime = File.exist?(pak_file) ? File.mtime(pak_file) : Time.at(0) # pakファイルが存在しない場合は1970年1月1日を基準とする
+        next if dependencies.all? { |dep| File.exist?(dep) && File.mtime(dep) <= pak_mtime }
         queue << [file, size]
       end
     end
@@ -112,6 +140,23 @@ class Make
     end
 
     threads.each(&:join)
+  end
+
+  # pakファイルの依存関係を取得する
+  # 以下の場合、yyy.pngを依存関係として取得する
+  # xxx[12][34]=yyy.12.34
+  # xxx=> yyy
+  def makeobj_dependencies(dat_file)
+    dependencies = [dat_file]
+    File.open(dat_file, 'r') do |file|
+      file.each_line do |line|
+        if line =~ /^\w+(\[\w+\])*=(> )?((\.\.\/)*\w+)\.\d+\.\d+/
+          require_file = File.expand_path("#{$3}.png", File.dirname(dat_file))
+          dependencies << require_file
+        end
+      end
+    end
+    dependencies.uniq
   end
 
   # 必要なファイルをコピー
