@@ -10,7 +10,21 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Pak128.Japan-Ex+Addonsチームが改造しています。改造箇所についてはgitの履歴を参照してください。
 =end
+
+begin
+  require 'rubyXL'
+rescue LoadError => e
+  $stderr.puts <<~EOS
+    rubyXL is not installed.
+    Please install it with: gem install rubyXL
+    rubyXLがインストールされていません。
+    インストールするには、次のコマンドを実行してください。: gem install rubyXL
+  EOS
+  raise e
+end
 
 # Simutransのdatのプリプロセッサのようなもの。
 module Datt
@@ -88,11 +102,12 @@ module Datt
 
   # アドオンブロック。「---」で区切られた一つの領域
   class Block
-    def initialize(workspace, addon = nil)
+    def initialize(workspace, addon = nil, excel_variables = {})
       @workspace = workspace
       @addon = addon
       @lines = []
       @dat_variables = {}
+      @excel_variables = excel_variables # pak名をキーとした配列、要素は各パラメータのHash
       @location = nil
       @fiename = nil
     end
@@ -164,7 +179,7 @@ module Datt
     # ●別のファイルを読み込む。
     def do_require(path, addon: nil)
       path = File.expand_path(path, File.dirname(@filename))
-      @workspace.require path, addon
+      @workspace.require path, addon, @excel_variables
     end
 
     # ●他の定義を取り込む
@@ -188,6 +203,60 @@ module Datt
       @dat_variables = block.dat_variables.merge(@dat_variables)
 
       @lines << '#<<<' << '' if label
+    end
+
+    # Excelファイルを読み込む
+    def do_require_excel(path)
+      excel_path = File.expand_path(path, File.dirname(@filename))
+      begin
+        workbook = RubyXL::Parser.parse(excel_path)
+      rescue Zip::Error
+        raise <<~EOS
+          Excel file '#{excel_path}' is not found or is not a valid Excel file.
+          Excelファイル '#{excel_path}' が見つからないか、正しいExcelファイルではありません。
+        EOS
+      end
+      worksheet = workbook['parameters']
+      raise <<~EOS unless worksheet
+        Excel worksheet 'parameters' not found in file '#{excel_path}'.
+        Excelファイル '#{excel_path}' にワークシート 'parameters' が見つかりません。
+      EOS
+      # 1行目にラベルがあるので、セルが空になるまでループでラベルを取得する
+      labels = {}
+      worksheet[0].cells.each do |cell|
+        break if cell.nil? || cell.value.nil? || cell.value.strip.empty?
+        labels[cell.value.strip.downcase] = cell.column
+      end
+      # @excel_variablesにパラメータを格納する
+      # nameをキーにして、ラベルに沿って各パラメータの値をハッシュで格納する
+      worksheet.each_with_index do |row, row_index|
+        next if row_index <= 2 # 1行目はラベル、2行目はその説明なのでスキップ
+        name_pos = labels["name"]
+        name = row[name_pos]&.value&.strip
+        # nameのセルが空ならスキップ
+        next if name.nil? || name.empty?
+        hash = Hash.new
+        labels.each do |label, col|
+          value = row[col]&.value
+          hash[label] = value
+        end
+        # nameをキーにしてハッシュを格納
+        @excel_variables[name] = hash
+      end
+    end
+
+    # Excelで読み込んだパラメータを参照するための関数
+    def excel(name = nil, key)
+      name ||= @dat_variables[:name]
+      raise <<~EOS if @excel_variables == {}
+        Excel parameters not found. Please use %require_excel directive to load parameters from an Excel file.
+        Excelパラメータが見つかりません。%require_excelディレクティブを使用して、Excelファイルからパラメータを読み込んでください。
+      EOS
+      raise <<~EOS if @excel_variables[name].nil?
+        Excel parameters for '#{name}' not found. Please check the name.
+        '#{name}'のExcelパラメータが見つかりません。名前を確認してください。
+      EOS
+      @excel_variables[name][key]
     end
 
     # ● #addonに値を設定する。
@@ -311,14 +380,14 @@ module Datt
     end
 
     # ファイルを読み込む。既に読み込み済みの場合は、読み込まない
-    def require(filename, addon = nil)
+    def require(filename, addon = nil, excel_parameters = {})
       key = File.basename(filename).downcase
 
       return if @loaded_files.include?(key)
 
       @loaded_files << key
       File.open(filename, 'r') do |io|
-        eval_datt io, filename, addon
+        eval_datt io, filename, addon, excel_parameters
       end
     end
 
@@ -331,7 +400,7 @@ module Datt
     end
 
     # ファイルを読み込む
-    def eval_datt(io, filename, addon = nil)
+    def eval_datt(io, filename, addon = nil, excel_parameters = {})
       lexer = Lexer.new(io, filename)
 
       lexer.next while lexer.type == :comment
@@ -340,7 +409,7 @@ module Datt
       loop do
         case lexer.type
         when :assign, :comment, :directive, :blank, :unknown
-          Block.new(self, addon).eval_block(lexer)
+          Block.new(self, addon, excel_parameters).eval_block(lexer)
         else
           break
         end
@@ -356,4 +425,3 @@ module Datt
   end
 end
 
-# datt.rbを外部から呼び出すために修正(Pak128.Japan-Ex+Addonsチーム)

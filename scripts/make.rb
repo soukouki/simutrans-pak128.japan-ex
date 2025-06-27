@@ -9,21 +9,25 @@ clean: 作成したファイルを削除 clean up created files
 help: このヘルプを表示 display this help
 EOS
 
-PAK64_DIRS = %w[
-  gui64-test
-  menu
-  symbol
-]
+PAK_DIRS = {
+  64 => %w[
+    gui64-test
+    menu
+    symbol
+  ],
+  128 => %w[
+    cursor
+    goods
+    ground
+    ways/128britain-ex
+    misc
+  ],
+  256 => %w[
+    ways/iss
+  ],
+}
 
-PAK128_DIRS = %w[
-  cursor
-  goods
-  ground
-  ways
-  misc
-]
-
-PAK_DIRS = (PAK64_DIRS.map{|d|[d, 64]} + PAK128_DIRS.map{|d|[d, 128]}).to_h
+PAK_DIRS_HASH = PAK_DIRS.map{|size, dirs| dirs.map{|dir| [dir, size]} }.flatten(1).to_h
 
 require 'fileutils'
 
@@ -82,7 +86,7 @@ class Make
   def makeobj
     makeobj = Makeobj.new
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons')
-    PAK_DIRS.each do |dir, size|
+    PAK_DIRS_HASH.each do |dir, size|
       Dir.glob("#{dir}/**/*.dat").each do |file|
         puts "Processing #{file}"
         output_path = 'Pak128.Japan-Ex+Addons/' + File.basename(file, '.dat') + '.pak'
