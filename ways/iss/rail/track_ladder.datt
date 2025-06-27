@@ -1,17 +1,12 @@
+%require '../../rails.datt'
+%require_excel '../../rails.xlsx'
+---
 # @text ja:[地上] フローティングラダー軌道（単）
 # @text en:[Ground] Floating ladder track (single)
+%include 'track'
 obj=way
 name=iss_wtg_0360_ladder_single
 copyright=128na
-intro_year=1900
-intro_month=1
-retire_year=2999
-retire_month=1
-waytype=track
-cost=150000
-maintenance=3000
-topspeed=360
-system_type=0
 icon=> ../icon_way2.5.0
 cursor=../icon_way2.5.1,-64,-40
 image[ns][0]=standard_ladder_g_single.0.2,-64,-32
@@ -55,18 +50,10 @@ image[nsew2][0]=standard_ladder_g_single.5.9,-64,-32
 ---
 # @text ja:[地上] フローティングラダー軌道（前）
 # @text en:[Ground] Floating ladder track (front)
+%include 'track'
 obj=way
 name=iss_wtg_0360_ladder_front
 copyright=128na
-intro_year=1900
-intro_month=1
-retire_year=2999
-retire_month=1
-waytype=track
-cost=150000
-maintenance=3000
-topspeed=360
-system_type=0
 icon=> ../icon_way2.5.2
 cursor=../icon_way2.5.3,-64,-40
 image[ns][0]=standard_ladder_g_front.0.2,-64,-32
@@ -110,18 +97,10 @@ image[nsew2][0]=standard_ladder_g_front.5.4,-64,-32
 ---
 # @text ja:[地上] フローティングラダー軌道（中）
 # @text en:[Ground] Floating ladder track (center)
+%include 'track'
 obj=way
 name=iss_wtg_0360_ladder_center
 copyright=128na
-intro_year=1900
-intro_month=1
-retire_year=2999
-retire_month=1
-waytype=track
-cost=150000
-maintenance=3000
-topspeed=360
-system_type=0
 icon=> ../icon_way2.5.4
 cursor=../icon_way2.5.5,-64,-40
 image[ns][0]=standard_ladder_g_center.0.2,-64,-32
@@ -155,18 +134,10 @@ image[nsew][0]=standard_ladder_g_center.3.4,-64,-32
 ---
 # @text ja:[地上] フローティングラダー軌道（後）
 # @text en:[Ground] Floating ladder track (back)
+%include 'track'
 obj=way
 name=iss_wtg_0360_ladder_back
 copyright=128na
-intro_year=1900
-intro_month=1
-retire_year=2999
-retire_month=1
-waytype=track
-cost=150000
-maintenance=3000
-topspeed=360
-system_type=0
 icon=> ../icon_way2.5.6
 cursor=../icon_way2.5.7,-64,-40
 image[ns][0]=standard_ladder_g_back.0.2,-64,-32
