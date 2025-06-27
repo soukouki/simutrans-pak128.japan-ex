@@ -29,6 +29,8 @@ PAK_DIRS = {
 
 PAK_DIRS_HASH = PAK_DIRS.map{|size, dirs| dirs.map{|dir| [dir, size]} }.flatten(1).to_h
 
+THREAD_COUNT = 6 # GitHub ActionsのThread数が4らしいので、おまけして6スレッドにした
+
 require 'fileutils'
 
 require_relative 'makedat'
@@ -44,8 +46,8 @@ class Make
         makedat()
       when 'makeobj'
         makeobj()
-      when 'copy_config'
-        copy_config()
+      when 'copy'
+        copy()
       when 'version'
         version()
       when 'clean'
@@ -68,7 +70,7 @@ class Make
   def all
     makedat()
     makeobj()
-    copy_config()
+    copy()
     version()
   end
 
@@ -86,22 +88,41 @@ class Make
   def makeobj
     makeobj = Makeobj.new
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons')
+    # 並列処理のためのキューを作成
+    queue = Queue.new
     PAK_DIRS_HASH.each do |dir, size|
       Dir.glob("#{dir}/**/*.dat").each do |file|
-        puts "Processing #{file}"
-        output_path = 'Pak128.Japan-Ex+Addons/' + File.basename(file, '.dat') + '.pak'
-        makeobj.create_pak(file, size, output_path)
+        queue << [file, size]
       end
     end
+
+    # 並列処理
+    threads = []
+    Thread.ignore_deadlock = true
+    THREAD_COUNT.times do
+      threads << Thread.new do
+        loop do
+          file, size = queue.pop(true) rescue break
+          puts "Processing #{file}"
+          output_path = 'Pak128.Japan-Ex+Addons/' + File.basename(file, '.dat') + '.pak'
+          makeobj.create_pak(file, size, output_path)
+          puts "Created #{output_path}"
+        end
+      end
+    end
+
+    threads.each(&:join)
   end
 
-  # config以下のファイルをPak128.Japan-Ex+Addons/config/にコピー
-  def copy_config
+  # 必要なファイルをコピー
+  def copy
     puts "Copying config files"
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons/config')
     Dir.glob('config/*').each do |file|
       FileUtils.cp(file, 'Pak128.Japan-Ex+Addons/config/')
     end
+    puts "Copying README.md"
+    FileUtils.cp('README.md', 'Pak128.Japan-Ex+Addons/README.md')
   end
 
   # 環境変数VERSIONを見て、Pak128.Japan-Ex+Addons/version.txtを作成する
