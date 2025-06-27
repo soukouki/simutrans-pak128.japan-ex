@@ -103,6 +103,11 @@ jobs:
         with:
           ruby-version: 3.3 # Windowsユーザーも居るので、最新版の3.4ではなく、少し古いバージョンを指定しておく
 
+      # rubyXLをインストール
+      - name: Install rubyXL
+        run: |
+          gem install rubyXL
+
       # Pak128.Japan-Ex+Addonsをビルド
       - name: Build Pak128.Japan-Ex+Addons
         run: ruby scripts/make.rb all

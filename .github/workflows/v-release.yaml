@@ -68,6 +68,11 @@ jobs:
         with:
           ruby-version: 3.3 # Windowsユーザーも居るので、最新版の3.4ではなく、少し古いバージョンを指定しておく
 
+      # rubyXLをインストール
+      - name: Install rubyXL
+        run: |
+          gem install rubyXL
+
       # タグからバージョンを取得して環境変数に設定
       - name: Extract version from tag
         if: startsWith(github.ref, 'refs/tags/v')

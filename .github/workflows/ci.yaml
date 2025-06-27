@@ -72,6 +72,11 @@ jobs:
         with:
           ruby-version: 3.3 # Windowsユーザーも居るので、最新版の3.4ではなく、少し古いバージョンを指定しておく
 
+      # rubyXLをインストール
+      - name: Install rubyXL
+        run: |
+          gem install rubyXL
+
       # Rubyコマンドを実行
       - name: Run Ruby commands
         run: |
