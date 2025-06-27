@@ -3,7 +3,7 @@
 %resource 'track'
 intro_year=#{excel('intro_year')}
 intro_month=#{excel('intro_month') || 1}
-# 引退を設定すると線路のアップデート時に異なる種類の線路に置き換えられてしまうため、基本的に引退はさせない
+# 引退を設定すると、引退後に線路のアップデート時に異なる種類の線路に置き換えられてしまうため、基本的に引退はさせない
 retire_year=#{excel('retire_year') || 9999}
 retire_month=#{excel('retire_month') || 1}
 waytype=#{excel('waytype')}
