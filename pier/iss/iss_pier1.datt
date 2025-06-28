@@ -1,11 +1,16 @@
 %require '../piers.datt'
 %require_excel '../piers.xlsx'
+
 ---
+# @text ja:[橋脚パーツ] コンクリート橋脚1
+# @text en:[Pier parts] Concrete Pier 1
 %include 'pier'
 name=iss_pier1
-cursor=pier-brick-arch.2.1
-icon=> pier-brick-arch.2.0
 
-backimage[00][0][0]=> pier-brick-arch.2.0
-backimage[01][0][0] = pier-brick-arch.2.1
+icon=> ./images/pier1.0.0
+cursor=./images/pier1.0.1,-64,-64
 
+backimage[00][0][0]=./images/pier1.1.0,-64,-96
+backimage[00][1][0]=./images/pier1.1.1,-64,-96
+backimage[00][2][0]=./images/pier1.1.2,-64,-96
+backimage[00][3][0]=./images/pier1.1.3,-64,-96

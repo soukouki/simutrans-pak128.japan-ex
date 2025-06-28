@@ -24,6 +24,7 @@ PAK_DIRS = {
   ],
   256 => %w[
     ways/iss
+    pier/iss
   ],
 }
 
