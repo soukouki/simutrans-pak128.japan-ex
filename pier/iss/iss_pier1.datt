@@ -1,0 +1,11 @@
+%require '../piers.datt'
+%require_excel '../piers.xlsx'
+---
+%include 'pier'
+name=iss_pier1
+cursor=pier-brick-arch.2.1
+icon=> pier-brick-arch.2.0
+
+backimage[00][0][0]=> pier-brick-arch.2.0
+backimage[01][0][0] = pier-brick-arch.2.1
+

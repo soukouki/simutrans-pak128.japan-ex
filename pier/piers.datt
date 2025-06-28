@@ -1,0 +1,21 @@
+%resource 'pier'
+intro_year=#{excel('intro_year')}
+intro_month=#{excel('intro_month') || 1}
+obj=pier
+cost=50000
+maintenance=1000
+name=#{excel('name')}
+topspeed=#{excel('topspeed')}
+max_weight=#{excel('max_weight')}
+
+above_way_ribi=#{excel('above_way_ribi')}
+below_way_ribi=#{excel('below_way_ribi')}
+auto_group=#{excel('auto_group')}
+auto_height=#{excel('auto_height')}
+base_mask=#{excel('base_mask')}
+middle_mask=#{excel('middle_mask')}
+support_mask=#{excel('support_mask')}
+sub_obj_mask=#{excel('sub_obj_mask')}
+deck_obj_mask=#{excel('deck_obj_mask')}
+above_slope=#{excel('above_slope')}
+drag_ribi=#{excel('drag_ribi')}
