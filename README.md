@@ -131,3 +131,4 @@ The executable files found in the `makeobj` directory are built from the [Simutr
   - sou7
   - Physka
   - Fairy's Simutrans STUDIO.(AoharaMaika/Kamiyan Plarail Industry.)
+  - Kawanami
