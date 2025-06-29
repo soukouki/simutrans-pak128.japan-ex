@@ -1,5 +1,5 @@
 *.dat
 *.pak
 *.xlsx#
-$*.xlsx
+~$*.xlsx
 Pak128.Japan-Ex+Addons
