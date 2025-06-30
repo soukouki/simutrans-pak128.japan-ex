@@ -98,7 +98,7 @@ class Make
       entab_mtime = File.exist?(entab_file) ? File.mtime(entab_file) : Time.at(0)
       oldest_mtime = [dat_mtime, jatab_mtime, entab_mtime].min
       next if dependencies.all? { |dep| File.exist?(dep) && File.mtime(dep) <= oldest_mtime }
-      puts "create_dat: #{file}"
+      puts "makedat: #{file}"
       makedat.create_dat(file)
     end
   end
@@ -147,7 +147,7 @@ class Make
         loop do
           file, size = queue.pop(true) rescue break
           output_path = 'Pak128.Japan-Ex+Addons/' + File.basename(file, '.dat') + '.pak'
-          puts "create_pak: #{file} (size: #{size})"
+          puts "makeobj: #{file} (size: #{size})"
           makeobj.create_pak(file, size, output_path)
         end
       end
@@ -164,7 +164,7 @@ class Make
     dependencies = [dat_file]
     File.open(dat_file, 'r') do |file|
       file.each_line do |line|
-        if line =~ /^\w+(\[\w+\])*=(> )?((\.\.\/)*\w+)\.\d+\.\d+/
+        if line =~ /^\w+(\[\w+\])*=(> )?((\.\.\/|\.\/)*[^,]+)\.\d+\.\d+/
           require_file = File.expand_path("#{$3}.png", File.dirname(dat_file))
           dependencies << require_file
         end
@@ -206,12 +206,12 @@ class Make
 
   # 必要なファイルをコピー
   def copy
-    puts "copy config files"
+    puts "copy: config files"
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons/config')
     Dir.glob('config/*').each do |file|
       FileUtils.cp(file, 'Pak128.Japan-Ex+Addons/config/')
     end
-    puts "copy README.md"
+    puts "copy: README.md"
     FileUtils.cp('README.md', 'Pak128.Japan-Ex+Addons/README.md')
   end
 
