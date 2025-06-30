@@ -300,6 +300,18 @@ module Datt
       @addon = false
     end
 
+    # jatabファイルを出力する。
+    def do_ja(ja_name)
+      $jatab.puts @dat_variables[:name]
+      $jatab.puts ja_name
+    end
+
+    # entabファイルを出力する。
+    def do_en(en_name)
+      $entab.puts @dat_variables[:name]
+      $entab.puts en_name
+    end
+
     # ソースを評価し、出力対象ならdatを出力する
     def eval_block(lexer)
       @location = lexer.location
