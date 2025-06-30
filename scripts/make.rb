@@ -175,7 +175,7 @@ class Make
   def maketab()
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons/text')
     puts 'maketab: ja.tab'
-    jatab_files = Dir.glob('**/*.jatab')
+    jatab_files = Dir.glob('**/*.jatab') + ['text/ja.tab']
     open('Pak128.Japan-Ex+Addons/text/ja.tab', 'w') do |file|
       file.print '§'
       jatab_files.each do |jatab_file|
@@ -188,7 +188,7 @@ class Make
       end
     end
     puts 'maketab: en.tab'
-    entab_files = Dir.glob('**/*.entab')
+    entab_files = Dir.glob('**/*.entab') + ['text/en.tab']
     open('Pak128.Japan-Ex+Addons/text/en.tab', 'w') do |file|
       file.print '§'
       entab_files.each do |entab_file|
