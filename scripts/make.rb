@@ -5,6 +5,11 @@ ruby scripts/make.rb <command>
 
 COMMAND:
 all: paksetを作成 create pakset
+makedat: datファイルを作成 create dat files
+makeobj: pakファイルを作成 create pak files
+maketab: ja.tab, en.tabを作成 create ja.tab and en.tab
+copy: 必要なファイルをコピー copy necessary files
+version: バージョン情報を作成 create version information
 clean: 作成したファイルを削除 clean up created files
 help: このヘルプを表示 display this help
 EOS
@@ -32,6 +37,8 @@ PAK_DIRS_HASH = PAK_DIRS.map{|size, dirs| dirs.map{|dir| [dir, size]} }.flatten(
 
 THREAD_COUNT = 6 # GitHub ActionsのThread数が4らしいので、おまけして6スレッドにした
 
+VERSION = ENV['VERSION'] || 'dev'
+
 require 'fileutils'
 
 require_relative 'makedat'
@@ -47,6 +54,8 @@ class Make
         makedat()
       when 'makeobj'
         makeobj()
+      when 'tab'
+        maketab()
       when 'copy'
         copy()
       when 'version'
@@ -71,6 +80,7 @@ class Make
   def all
     makedat()
     makeobj()
+    maketab()
     copy()
     version()
   end
@@ -80,11 +90,16 @@ class Make
     makedat = MakeDat.new
     Dir.glob('**/*.datt').each do |file|
       dat_file = file.sub(/\.datt$/, '.dat')
+      jatab_file = file.sub(/\.datt$/, '.jatab')
+      entab_file = file.sub(/\.datt$/, '.entab')
       # 依存ファイルを取得し、datファイルよりも新しいものがあれば再生成する
       dependencies = makedat_dependencies(file)
       dat_mtime = File.exist?(dat_file) ? File.mtime(dat_file) : Time.at(0) # datファイルが存在しない場合は1970年1月1日を基準とする
-      next if dependencies.all? { |dep| File.exist?(dep) && File.mtime(dep) <= dat_mtime }
-      puts "Creating dat file for #{file}"
+      jatab_mtime = File.exist?(jatab_file) ? File.mtime(jatab_file) : Time.at(0)
+      entab_mtime = File.exist?(entab_file) ? File.mtime(entab_file) : Time.at(0)
+      oldest_mtime = [dat_mtime, jatab_mtime, entab_mtime].min
+      next if dependencies.all? { |dep| File.exist?(dep) && File.mtime(dep) <= oldest_mtime }
+      puts "create_dat: #{file}"
       makedat.create_dat(file)
     end
   end
@@ -132,10 +147,9 @@ class Make
       threads << Thread.new do
         loop do
           file, size = queue.pop(true) rescue break
-          puts "Processing #{file}"
           output_path = 'Pak128.Japan-Ex+Addons/' + File.basename(file, '.dat') + '.pak'
+          puts "create_pak: #{file} (size: #{size})"
           makeobj.create_pak(file, size, output_path)
-          puts "Created #{output_path}"
         end
       end
     end
@@ -146,7 +160,7 @@ class Make
   # pakファイルの依存関係を取得する
   # 以下の場合、yyy.pngを依存関係として取得する
   # xxx[12][34]=yyy.12.34
-  # xxx=> yyy
+  # xxx=> yyy.12.34
   def makeobj_dependencies(dat_file)
     dependencies = [dat_file]
     File.open(dat_file, 'r') do |file|
@@ -160,26 +174,56 @@ class Make
     dependencies.uniq
   end
 
+  # jatabファイルとentabファイルを集めてja.tabとen.tabを作成する
+  def maketab()
+    FileUtils.mkdir_p('Pak128.Japan-Ex+Addons/text')
+    puts 'maketab: ja.tab'
+    jatab_files = Dir.glob('**/*.jatab') + ['text/ja.tab']
+    open('Pak128.Japan-Ex+Addons/text/ja.tab', 'w') do |file|
+      file.print '§'
+      jatab_files.each do |jatab_file|
+        File.open(jatab_file, 'r') do |jatab|
+          jatab.each_line do |line|
+            # jatabファイルの内容をそのままja.tabに書き込む
+            file.puts line.chomp
+          end
+        end
+      end
+    end
+    puts 'maketab: en.tab'
+    entab_files = Dir.glob('**/*.entab') + ['text/en.tab']
+    open('Pak128.Japan-Ex+Addons/text/en.tab', 'w') do |file|
+      file.print '§'
+      entab_files.each do |entab_file|
+        File.open(entab_file, 'r') do |entab|
+          entab.each_line do |line|
+            # entabファイルの内容をそのままen.tabに書き込む
+            file.puts line.chomp
+          end
+        end
+      end
+    end
+  end
+
   # 必要なファイルをコピー
   def copy
-    puts "Copying config files"
+    puts "copy config files"
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons/config')
     Dir.glob('config/*').each do |file|
       FileUtils.cp(file, 'Pak128.Japan-Ex+Addons/config/')
     end
-    puts "Copying README.md"
+    puts "copy README.md"
     FileUtils.cp('README.md', 'Pak128.Japan-Ex+Addons/README.md')
   end
 
   # 環境変数VERSIONを見て、Pak128.Japan-Ex+Addons/version.txtを作成する
   # もしVERSIONが設定されていなければ、"dev"を指定する
   def version
-    version = ENV['VERSION'] || 'dev'
-    puts "Creating version file with version: #{version}"
+    puts "version: #{VERSION}"
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons')
     File.open('Pak128.Japan-Ex+Addons/version.txt', 'w') do |file|
       file.puts <<~EOS
-        #{version}
+        #{VERSION}
 
         バージョンの説明:
         v1.2.3 : リリースバージョン
@@ -195,21 +239,25 @@ class Make
   end
 
   def clean
-    puts "Cleaning up created files..."
     # datファイルは同名のdattファイルがある場合のみ削除する
     # .dattファイルが無い場合、警告メッセージを出力する
     Dir.glob('**/*.dat').each do |file|
       datt_file = file.sub(/\.dat$/, '.datt')
       if File.exist?(datt_file)
-        puts "Removing #{file}"
+        puts "clean: #{file}"
         FileUtils.rm(file)
       else
         puts "Warning: No corresponding .datt file for #{file}, skipping deletion."
       end
     end
+    puts "clean: pak files"
     FileUtils.rm_rf(Dir.glob('**/*.pak'))
+    puts "clean: jatab files"
+    FileUtils.rm_rf(Dir.glob('**/*.jatab'))
+    puts "clean: entab files"
+    FileUtils.rm_rf(Dir.glob('**/*.entab'))
+    puts "clean: Pak128.Japan-Ex+Addons directory"
     FileUtils.rm_rf('Pak128.Japan-Ex+Addons')
-    puts "Cleanup complete."
   end
 end
 

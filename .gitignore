@@ -1,4 +1,6 @@
 *.dat
+*.jatab
+*.entab
 *.pak
 *.xlsx#
 ~$*.xlsx
