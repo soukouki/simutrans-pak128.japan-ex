@@ -39,6 +39,8 @@ module Datt
   COMMENT_LINE = /^#(.*)$/
   # ディレクティブ
   DIRECTIVE_LINE = /^%(.+)$/
+  # 遅延ディレクティブ
+  DELAYED_DIRECTIVE_LINE = /^%%(.+)$/
   # 空行
   BLANK_LINE = /^$/
   # 画像指定の右辺
@@ -71,6 +73,8 @@ module Datt
           @type = :assign
         when BLANK_LINE
           @type = :blank
+        when DELAYED_DIRECTIVE_LINE
+          @type = :delayed_directive
         when DIRECTIVE_LINE
           @type = :directive
         else
@@ -194,7 +198,13 @@ module Datt
         end
       end
       block.lines.each do |l|
-        if l =~ ASSIGN_LINE && @dat_variables.include?($1.downcase.to_sym)
+        if l =~ DELAYED_DIRECTIVE_LINE
+          # 遅延ディレクティブの場合、%を一つ減らして、後で評価する
+          @lines << l[1..-1]
+        elsif l =~ DIRECTIVE_LINE
+          # ディレクティブの場合、評価する
+          eval_derective($1)
+        elsif l =~ ASSIGN_LINE && @dat_variables.include?($1.downcase.to_sym)
           @lines << '#' + l
         else
           @lines << l
@@ -290,6 +300,18 @@ module Datt
       @addon = false
     end
 
+    # jatabファイルを出力する。
+    def do_ja(ja_name)
+      $jatab.puts @dat_variables[:name]
+      $jatab.puts ja_name
+    end
+
+    # entabファイルを出力する。
+    def do_en(en_name)
+      $entab.puts @dat_variables[:name]
+      $entab.puts en_name
+    end
+
     # ソースを評価し、出力対象ならdatを出力する
     def eval_block(lexer)
       @location = lexer.location
@@ -298,7 +320,9 @@ module Datt
       loop do
         case lexer.type
         when :directive
-          instance_eval 'do_' + lexer.last_match[1]
+          eval_derective(lexer.last_match[1])
+        when :delayed_directive
+          @lines << "%#{lexer.last_match[1]}"
         when :assign, :comment, :blank, :unknown
           push_dat_line lexer.line
         else
@@ -310,6 +334,10 @@ module Datt
       @workspace.blocks << self if @dat_variables.include?(:name)
 
       write_dat_block if write_dat_block?
+    end
+
+    def eval_derective(arg)
+      instance_eval "do_#{arg}"
     end
 
     # 評価結果に一行付け加える

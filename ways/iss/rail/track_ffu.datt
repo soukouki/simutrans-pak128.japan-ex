@@ -3,10 +3,10 @@
 ---
 # @text ja:[地上] 合成樹脂まくらぎ軌道（単）
 # @text en:[Ground] FFU tie track (single)
-%include 'track'
 obj=way
 name=iss_wtg_360_ffu_single
 copyright=128na
+%include 'track'
 icon=> ../icon_way2.1.8
 cursor=../icon_way2.1.9,-64,-40
 image[ns][0]=standard_ffu_g_single.0.2,-64,-32
@@ -50,10 +50,10 @@ image[nsew2][0]=standard_ffu_g_single.5.9,-64,-32
 ---
 # @text ja:[地上] 合成樹脂まくらぎ軌道（前）
 # @text en:[Ground] FFU tie track (front)
-%include 'track'
 obj=way
 name=iss_wtg_360_ffu_front
 copyright=128na
+%include 'track'
 icon=> ../icon_way2.1.10
 cursor=../icon_way2.1.11,-64,-40
 image[ns][0]=standard_ffu_g_front.0.2,-64,-32
@@ -97,10 +97,10 @@ image[nsew2][0]=standard_ffu_g_front.5.4,-64,-32
 ---
 # @text ja:[地上] 合成樹脂まくらぎ軌道（中）
 # @text en:[Ground] FFU tie track (center)
-%include 'track'
 obj=way
 name=iss_wtg_360_ffu_center
 copyright=128na
+%include 'track'
 icon=> ../icon_way2.1.12
 cursor=../icon_way2.1.13,-64,-40
 image[ns][0]=standard_ffu_g_center.0.2,-64,-32
@@ -134,10 +134,10 @@ image[nsew][0]=standard_ffu_g_center.3.4,-64,-32
 ---
 # @text ja:[地上] 合成樹脂まくらぎ軌道（後）
 # @text en:[Ground] FFU tie track (back)
-%include 'track'
 obj=way
 name=iss_wtg_360_ffu_back
 copyright=128na
+%include 'track'
 icon=> ../icon_way2.1.14
 cursor=../icon_way2.1.15,-64,-40
 image[ns][0]=standard_ffu_g_back.0.2,-64,-32
