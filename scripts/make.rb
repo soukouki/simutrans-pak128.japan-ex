@@ -164,7 +164,7 @@ class Make
     dependencies = [dat_file]
     File.open(dat_file, 'r') do |file|
       file.each_line do |line|
-        if line =~ /^\w+(\[\w+\])*=(> )?((\.\.\/)*\w+)\.\d+\.\d+/
+        if line =~ /^\w+(\[\w+\])*=(> )?((\.\.\/|\.\/)*[^,]+)\.\d+\.\d+/
           require_file = File.expand_path("#{$3}.png", File.dirname(dat_file))
           dependencies << require_file
         end
