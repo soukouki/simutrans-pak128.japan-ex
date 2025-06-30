@@ -36,6 +36,8 @@ PAK_DIRS_HASH = PAK_DIRS.map{|size, dirs| dirs.map{|dir| [dir, size]} }.flatten(
 
 THREAD_COUNT = 6 # GitHub ActionsのThread数が4らしいので、おまけして6スレッドにした
 
+VERSION = ENV['VERSION'] || 'dev'
+
 require 'fileutils'
 
 require_relative 'makedat'
@@ -216,12 +218,11 @@ class Make
   # 環境変数VERSIONを見て、Pak128.Japan-Ex+Addons/version.txtを作成する
   # もしVERSIONが設定されていなければ、"dev"を指定する
   def version
-    version = ENV['VERSION'] || 'dev'
-    puts "version: #{version}"
+    puts "version: #{VERSION}"
     FileUtils.mkdir_p('Pak128.Japan-Ex+Addons')
     File.open('Pak128.Japan-Ex+Addons/version.txt', 'w') do |file|
       file.puts <<~EOS
-        #{version}
+        #{VERSION}
 
         バージョンの説明:
         v1.2.3 : リリースバージョン
