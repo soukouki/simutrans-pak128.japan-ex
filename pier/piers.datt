@@ -1,6 +1,8 @@
 ---
 
 %resource 'pier'
+%%ja excel('japanese')
+%%en excel('english')
 intro_year=#{excel('intro_year')}
 intro_month=#{excel('intro_month') || 1}
 obj=pier
