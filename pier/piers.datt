@@ -1,6 +1,7 @@
 ---
 
 %resource 'pier'
+%%addon excel!('addon') == '含'
 %%ja excel('japanese')
 %%en excel('english')
 intro_year=#{excel('intro_year')}

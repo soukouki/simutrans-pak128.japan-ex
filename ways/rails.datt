@@ -3,8 +3,10 @@
 # 鉄道軌道全般(併用軌道を含む)
 %resource 'track'
 
-%%ja excel('japanese')
-%%en excel('english')
+%%addon excel!('addon') == '含'
+
+%%ja excel!('japanese')
+%%en excel!('english')
 
 %%def :intro_year_, excel!('intro_year')
 %%def :max_weight_, excel!('max_weight')
