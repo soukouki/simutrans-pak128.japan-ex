@@ -256,7 +256,7 @@ module Datt
     end
 
     # Excelで読み込んだパラメータを参照するための関数
-    def excel(name = nil, key)
+    def excel(key, name = nil)
       name ||= @dat_variables[:name]
       raise <<~EOS if @excel_variables == {}
         Excel parameters not found. Please use %require_excel directive to load parameters from an Excel file.
@@ -267,6 +267,16 @@ module Datt
         '#{name}'のExcelパラメータが見つかりません。名前を確認してください。
       EOS
       @excel_variables[name][key]
+    end
+
+    # excel関数と同じだが、パラメータが無いときにエラーを出す
+    def excel!(key, name = nil)
+      value = excel(key, name)
+      raise <<~EOS if value.nil?
+        Excel parameter '#{key}' for '#{name}' not found.
+        '#{name}'のExcelパラメータ '#{key}' が見つかりません。
+      EOS
+      value
     end
 
     # ● #addonに値を設定する。
