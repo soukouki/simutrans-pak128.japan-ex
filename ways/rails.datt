@@ -1,18 +1,39 @@
 ---
 
+# 鉄道軌道全般(併用軌道を含む)
 %resource 'track'
+
 %%ja excel('japanese')
 %%en excel('english')
-intro_year=#{excel('intro_year')}
+
+%%def :intro_year_, excel!('intro_year')
+%%def :max_weight_, excel!('max_weight')
+%%def :topspeed_,   excel!('topspeed')
+
+intro_year=#{intro_year_}
 intro_month=#{excel('intro_month') || 1}
 # 引退を設定すると、引退後に線路のアップデート時に異なる種類の線路に置き換えられてしまうため、基本的に引退はさせない
 retire_year=#{excel('retire_year') || 9999}
 retire_month=#{excel('retire_month') || 1}
-waytype=#{excel('waytype')}
-cost=50000
-maintenance=1000
-topspeed=#{excel('topspeed')}
-max_weight=#{excel('max_weight')}
+
+topspeed=#{topspeed_}
+max_weight=#{max_weight_}
 system_type=0
+waytype=#{excel!('waytype')}
+
+%%def :cost_, (0.7*(1.48*topspeed_**2 + 359*topspeed_) + 0.3*(199*max_weight_**2 + 1267*max_weight_))
+cost=#{(cost_ * (excel('cost_coefficient') || 1)).round}
+# 維持費は、Pak128.Britain-Exを見たところあまり規則性を読み取れなかったので、すべて同じ値にすることにした。
+maintenance=#{(500 * (excel('maintenance_coefficient') || 1)).round}
+%%def :wear_capacity_, [(0.3*cost_**2 - 1000*cost_), 5000000000].min
+wear_capacity=#{(wear_capacity_ * (excel('wear_coefficient') || 1).round)}
+
+# way_constraint_permissiveは特に設定しない
+%%def :gauge, excel('gauge') || 'すべて'
+# 本体のコードを読んだところ、255を指定するとそのprohibitiveの値は無視されるようなので、255を指定する。
+way_constraint_prohibitive[0]=#{gauge == 'すべて' || gauge == '762mm' ? 0 : 255}
+way_constraint_prohibitive[1]=#{gauge == 'すべて' || gauge == '1067mm' ? 1 : 255}
+way_constraint_prohibitive[2]=#{gauge == 'すべて' || gauge == '1372mm' ? 2 : 255}
+way_constraint_prohibitive[3]=#{gauge == 'すべて' || gauge == '1435mm' ? 3 : 255}
 
 ---
