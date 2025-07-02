@@ -1,7 +1,7 @@
 %require '../roadsign.datt'
 %require_excel '../roadsign.xlsx'
 
--------------------------------------------------------------------------------
+---
 name=OBK_rail_signal_3G
 %include 'roadsign'
 cost=500
@@ -22,9 +22,7 @@ Image[8]=rail_signal01.2.0
 Image[9]=rail_signal01.2.1
 Image[10]=rail_signal01.2.2
 Image[11]=rail_signal01.2.3
-intro_year=1895
-intro_month=1
--------------------------------------------------------------------------------
+---
 name=OBK_rail_signal_4G
 %include 'roadsign'
 cost=500
@@ -50,9 +48,7 @@ Image[12]=rail_signal01.6.0
 Image[13]=rail_signal01.6.1
 Image[14]=rail_signal01.6.2
 Image[15]=rail_signal01.6.3
-intro_year=1895
-intro_month=1
--------------------------------------------------------------------------------
+---
 name=OBK_rail_choosesignal_mainright_3G
 %include 'roadsign'
 cost=500
@@ -83,9 +79,8 @@ Image[16]=rail_signal02.4.0
 Image[17]=rail_signal02.4.1
 Image[18]=rail_signal02.4.2
 Image[19]=rail_signal02.4.3
-intro_year=1895
-intro_month=1
--------------------------------------------------------------------------------
+---
+
 name=OBK_rail_choosesignal_4G
 %include 'roadsign'
 cost=500
@@ -126,5 +121,3 @@ Image[16]=rail_signal02.11.0
 Image[17]=rail_signal02.11.1
 Image[18]=rail_signal02.11.2
 Image[19]=rail_signal02.11.3
-intro_year=1895
-intro_month=1
