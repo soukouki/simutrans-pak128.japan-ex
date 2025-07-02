@@ -26,6 +26,7 @@ PAK_DIRS = {
     ground
     way/128britain-ex
     misc
+    roadsign
   ],
   256 => %w[
     way/iss
