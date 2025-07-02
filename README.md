@@ -20,9 +20,9 @@ Unless otherwise noted, the files created by the Pak128.Japan-Ex+Addons team are
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `ways/128britain-ex`以下のPNGファイルとdattファイルと、`config`以下のtabファイルは、[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)を元に改造したものです。これらのファイルは Artistic License に基づいて配布されています。詳細なライセンス条項については、[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)をご参照ください。
+`cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `way/128britain-ex`以下のPNGファイルとdattファイルと、`config`以下のtabファイルは、[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)を元に改造したものです。これらのファイルは Artistic License に基づいて配布されています。詳細なライセンス条項については、[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)をご参照ください。
 
-The PNG files and datt files under `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, and `ways/128britain-ex`, as well as the tab files under `config`, have been modified based on [Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain). These files are distributed under the Artistic License. For detailed licensing terms, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt).
+The PNG files and datt files under `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, and `way/128britain-ex`, as well as the tab files under `config`, have been modified based on [Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain). These files are distributed under the Artistic License. For detailed licensing terms, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt).
 
 Pak128.Britain-Exチームが作成した元作品を元作者の条件のもとで利用し、改造部分のみを [CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
 
@@ -87,9 +87,9 @@ Based on the above permission, we use Gobanboshi's original work under the origi
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`ways/iss`および`pier/iss`以下のPNGファイルとdattファイルは、128na氏の[それなりにそれっぽいインフラアドオン集](https://128na.github.io/iss/)を元に改造を加えたものです。
+`way/iss`および`pier/iss`以下のPNGファイルとdattファイルは、128na氏の[それなりにそれっぽいインフラアドオン集](https://128na.github.io/iss/)を元に改造を加えたものです。
 
-The PNG files and datt files located under `ways/iss` and `pier/iss` are modified versions of 128na's [Infrastructure of Sorenarini Soreppoi series](https://128na.github.io/iss/).
+The PNG files and datt files located under `way/iss` and `pier/iss` are modified versions of 128na's [Infrastructure of Sorenarini Soreppoi series](https://128na.github.io/iss/).
 
 元作品は[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](http://creativecommons.org/licenses/by/4.0/)の元で配布されています。改造部分については、[CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
 
