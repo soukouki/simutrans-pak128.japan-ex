@@ -114,6 +114,21 @@ The PNG files and datt files located under `menu/kururi` are modified versions o
 
 Based on the above permission, we use Kururi's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
 
+### ooboke
+
+- Original work
+  - 大ぼけ(ooboke)
+- Modifications
+  - The Pak128.Japan-Ex+Addons Team
+
+`roadsign/ooboke`以下のPNGファイルとdattファイルは、大ぼけ氏の[鉄道用信号機](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool)に改造を加えたものです。
+
+The PNG files and datt files located under `roadsign/ooboke` are modified versions of Ooboke's [Railway signal](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool).
+
+> 【改造その他について】
+> 改造及びその公開等はご自由にどうぞ。
+
+私達は上記の許諾に基づき、大ぼけ氏が作成した元作品を元作者の条件のもとで利用し、改造部分のみを [CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
 ### makeobj
 
 - Authors

@@ -1,0 +1,14 @@
+%resource 'roadsign'
+%%ja excel('japanese')
+%%en excel('english')
+obj=roadsign
+copyright=#{excel('copyright')}
+waytype=#{excel('waytype')}
+intro_year=#{excel('intro_year')}
+intro_month=#{excel('intro_month') || 1}
+is_signal=#{(excel('signaltype')=='信号' or excel('signaltype')=='場内信号') ? 1 : 0}
+is_presignal=#{excel('signaltype')=='遠方信号' ? 1 : 0}
+free_route=#{excel('signaltype')=='場内信号' ? 1 : 0}
+max_distance_to_signalbox=#{excel('max_distance_to_signalbox')}
+has_selective_choose=#{excel('has_selective_choose')}
+offset_left=1
