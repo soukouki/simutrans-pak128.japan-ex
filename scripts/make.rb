@@ -24,11 +24,11 @@ PAK_DIRS = {
     cursor
     goods
     ground
-    ways/128britain-ex
+    way/128britain-ex
     misc
   ],
   256 => %w[
-    ways/iss
+    way/iss
     pier/iss
   ],
 }
