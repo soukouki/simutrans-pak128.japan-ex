@@ -322,6 +322,31 @@ module Datt
       $entab.puts en_name
     end
 
+    # Rubyのファイルを読み込む。全て相対パスで扱う
+    # このコマンドは必ず.rb拡張子までfilenameに指定する必要がある
+    def do_require_ruby(filename)
+      if filename !~ /\.rb$/
+        $stderr.puts <<~EOS
+          %require_ruby directive requires a filename with .rb extension.
+          %require_rubyディレクティブは、.rb拡張子を持つファイル名を指定する必要があります。
+        EOS
+        raise ArgumentError, 'filename must end with .rb'
+      end
+      filename = File.expand_path(filename, File.dirname(@filename))
+      begin
+        require filename
+      rescue LoadError => e
+        $stderr.puts <<~EOS
+          Ruby file '#{filename}' is not found or is not a valid Ruby file.
+          Rubyファイル '#{filename}' が見つからないか、正しいRubyファイルではありません。
+          
+          以下例外メッセージ
+          #{e.message}
+        EOS
+        raise e
+      end
+    end
+
     # ソースを評価し、出力対象ならdatを出力する
     def eval_block(lexer)
       @location = lexer.location

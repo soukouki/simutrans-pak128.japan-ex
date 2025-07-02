@@ -111,10 +111,14 @@ class Make
     dependencies = [datt_file]
     File.open(datt_file, 'r') do |file|
       file.each_line do |line|
-        if line =~ /^%require\s+['"](.*)['"]/
+        case line
+        when /^%require\s+['"](.*)['"]/
           require_file = File.expand_path($1, File.dirname(datt_file))
           dependencies += makedat_dependencies(require_file)
-        elsif line =~ /^%require_excel\s+['"](.*)['"]/
+        when /^%require_excel\s+['"](.*)['"]/
+          require_file = File.expand_path($1, File.dirname(datt_file))
+          dependencies << require_file
+        when /^%require_ruby\s+['"](.*)['"]/
           require_file = File.expand_path($1, File.dirname(datt_file))
           dependencies << require_file
         end
