@@ -54,180 +54,110 @@ backimage[56][2][0]=./images/pier2-pillar.9.2,-64,-96
 backimage[56][3][0]=./images/pier2-pillar.9.3,-64,-96
 
 ---
-## @text ja:[橋脚パーツ] コンクリート橋脚1 対角
-## @text en:[Pier parts] Concrete Pier 1 Diagonal
-#name=iss_pier1_diag
-#%include 'pier'
-#
-#icon=> ./images/pier1-diag.0.0
-#cursor=./images/pier1-diag.0.1,-64,-64
-#
-#backimage[00][0][0]=./images/pier1-diag.1.0,-64,-96
-#backimage[00][1][0]=./images/pier1-diag.1.1,-64,-96
-#backimage[00][2][0]=./images/pier1-diag.1.2,-64,-96
-#backimage[00][3][0]=./images/pier1-diag.1.3,-64,-96
-#
-#backimage[36][0][0]=./images/pier1-diag.2.0,-64,-96
-#backimage[36][1][0]=./images/pier1-diag.2.1,-64,-96
-#backimage[36][2][0]=./images/pier1-diag.2.2,-64,-96
-#backimage[36][3][0]=./images/pier1-diag.2.3,-64,-96
-#
-#backimage[12][0][0]=./images/pier1-diag.3.0,-64,-96
-#backimage[12][1][0]=./images/pier1-diag.3.1,-64,-96
-#backimage[12][2][0]=./images/pier1-diag.3.2,-64,-96
-#backimage[12][3][0]=./images/pier1-diag.3.3,-64,-96
-#
-#backimage[04][0][0]=./images/pier1-diag.4.0,-64,-96
-#backimage[04][1][0]=./images/pier1-diag.4.1,-64,-96
-#backimage[04][2][0]=./images/pier1-diag.4.2,-64,-96
-#backimage[04][3][0]=./images/pier1-diag.4.3,-64,-96
-#
-#backimage[28][0][0]=./images/pier1-diag.5.0,-64,-96r
-#backimage[28][1][0]=./images/pier1-diag.5.1,-64,-96
-#backimage[28][2][0]=./images/pier1-diag.5.2,-64,-96
-#backimage[28][3][0]=./images/pier1-diag.5.3,-64,-96
-#
-#---
-## @text ja:[橋脚パーツ] コンクリート橋脚1 高架
-## @text en:[Pier parts] Concrete Pier 1 Deck
-#name=iss_pier1_deck
-#%include 'pier'
-#
-#
-#icon=> ./images/pier1-deck.0.0
-#cursor=./images/pier1-deck.0.1,-64,-64
-#
-##自動設置用アイコンとカーソル
-#backimage[80][0][0]=> ./images/pier1-deck.0.0
-#backimage[79][0][0]=./images/pier1-deck.0.1,-64,-64
-#
-#backimage[00][0][0]=./images/pier1-deck.1.0,-64,-96
-#backimage[00][1][0]=./images/pier1-deck.1.1,-64,-96
-#backimage[00][2][0]=./images/pier1-deck.1.2,-64,-96
-#backimage[00][3][0]=./images/pier1-deck.1.3,-64,-96
-#
-#backimage[36][0][0]=./images/pier1-deck.2.0,-64,-96
-#backimage[36][1][0]=./images/pier1-deck.2.1,-64,-96
-#backimage[36][2][0]=./images/pier1-deck.2.2,-64,-96
-#backimage[36][3][0]=./images/pier1-deck.2.3,-64,-96
-#
-#backimage[12][0][0]=./images/pier1-deck.3.0,-64,-96
-#backimage[12][1][0]=./images/pier1-deck.3.1,-64,-96
-#backimage[12][2][0]=./images/pier1-deck.3.2,-64,-96
-#backimage[12][3][0]=./images/pier1-deck.3.3,-64,-96
-#
-#backimage[04][0][0]=./images/pier1-deck.4.0,-64,-96
-#backimage[04][1][0]=./images/pier1-deck.4.1,-64,-96
-#backimage[04][2][0]=./images/pier1-deck.4.2,-64,-96
-#backimage[04][3][0]=./images/pier1-deck.4.3,-64,-96
-#
-#backimage[28][0][0]=./images/pier1-deck.5.0,-64,-96
-#backimage[28][1][0]=./images/pier1-deck.5.1,-64,-96
-#backimage[28][2][0]=./images/pier1-deck.5.2,-64,-96
-#backimage[28][3][0]=./images/pier1-deck.5.3,-64,-96
-#
-#---
-## @text ja:[橋脚パーツ] コンクリート橋脚1 高架 [対角]
-## @text en:[Pier parts] Concrete Pier 1 Deck
-#name=iss_pier1_deck_diag
-#%include 'pier'
-#
-#
-#icon=> ./images/pier1-deck-diag.0.0
-#cursor=./images/pier1-deck-diag.0.1,-64,-64
-#
-#backimage[00][0][0]=./images/pier1-deck-diag.1.0,-64,-96
-#backimage[00][1][0]=./images/pier1-deck-diag.1.1,-64,-96
-#backimage[00][2][0]=./images/pier1-deck-diag.1.2,-64,-96
-#backimage[00][3][0]=./images/pier1-deck-diag.1.3,-64,-96
-#
-#backimage[36][0][0]=./images/pier1-deck-diag.2.0,-64,-96
-#backimage[36][1][0]=./images/pier1-deck-diag.2.1,-64,-96
-#backimage[36][2][0]=./images/pier1-deck-diag.2.2,-64,-96
-#backimage[36][3][0]=./images/pier1-deck-diag.2.3,-64,-96
-#
-#backimage[12][0][0]=./images/pier1-deck-diag.3.0,-64,-96
-#backimage[12][1][0]=./images/pier1-deck-diag.3.1,-64,-96
-#backimage[12][2][0]=./images/pier1-deck-diag.3.2,-64,-96
-#backimage[12][3][0]=./images/pier1-deck-diag.3.3,-64,-96
-#
-#backimage[04][0][0]=./images/pier1-deck-diag.4.0,-64,-96
-#backimage[04][1][0]=./images/pier1-deck-diag.4.1,-64,-96
-#backimage[04][2][0]=./images/pier1-deck-diag.4.2,-64,-96
-#backimage[04][3][0]=./images/pier1-deck-diag.4.3,-64,-96
-#
-#backimage[28][0][0]=./images/pier1-deck-diag.5.0,-64,-96
-#backimage[28][1][0]=./images/pier1-deck-diag.5.1,-64,-96
-#backimage[28][2][0]=./images/pier1-deck-diag.5.2,-64,-96
-#backimage[28][3][0]=./images/pier1-deck-diag.5.3,-64,-96
-#
-#---
-## @text ja:[橋脚パーツ] コンクリート橋脚1 高架サポート
-## @text en:[Pier parts] Concrete Pier 1 Deck support
-#name=iss_pier1_base
-#%include 'pier'
-#
-#
-#icon=> ./images/pier1-base.0.0
-#cursor=./images/pier1-base.0.1,-64,-64
-#
-#backimage[00][0][0]=./images/pier1-base.1.0,-64,-96
-#backimage[00][1][0]=./images/pier1-base.1.1,-64,-96
-#backimage[00][2][0]=./images/pier1-base.1.2,-64,-96
-#backimage[00][3][0]=./images/pier1-base.1.3,-64,-96
-#
-#backimage[36][0][0]=./images/pier1-base.2.0,-64,-96
-#backimage[36][1][0]=./images/pier1-base.2.1,-64,-96
-#backimage[36][2][0]=./images/pier1-base.2.2,-64,-96
-#backimage[36][3][0]=./images/pier1-base.2.3,-64,-96
-#
-#backimage[12][0][0]=./images/pier1-base.3.0,-64,-96
-#backimage[12][1][0]=./images/pier1-base.3.1,-64,-96
-#backimage[12][2][0]=./images/pier1-base.3.2,-64,-96
-#backimage[12][3][0]=./images/pier1-base.3.3,-64,-96
-#
-#backimage[04][0][0]=./images/pier1-base.4.0,-64,-96
-#backimage[04][1][0]=./images/pier1-base.4.1,-64,-96
-#backimage[04][2][0]=./images/pier1-base.4.2,-64,-96
-#backimage[04][3][0]=./images/pier1-base.4.3,-64,-96
-#
-#backimage[28][0][0]=./images/pier1-base.5.0,-64,-96
-#backimage[28][1][0]=./images/pier1-base.5.1,-64,-96
-#backimage[28][2][0]=./images/pier1-base.5.2,-64,-96
-#backimage[28][3][0]=./images/pier1-base.5.3,-64,-96
-#
-#---
-## @text ja:[橋脚パーツ] コンクリート橋脚1 高架サポート [対角]
-## @text en:[Pier parts] Concrete Pier 1 Deck support
-#name=iss_pier1_base_diag
-#%include 'pier'
-#
-#
-#icon=> ./images/pier1-base-diag.0.0
-#cursor=./images/pier1-base-diag.0.1,-64,-64
-#
-#backimage[00][0][0]=./images/pier1-base-diag.1.0,-64,-96
-#backimage[00][1][0]=./images/pier1-base-diag.1.1,-64,-96
-#backimage[00][2][0]=./images/pier1-base-diag.1.2,-64,-96
-#backimage[00][3][0]=./images/pier1-base-diag.1.3,-64,-96
-#
-#backimage[36][0][0]=./images/pier1-base-diag.2.0,-64,-96
-#backimage[36][1][0]=./images/pier1-base-diag.2.1,-64,-96
-#backimage[36][2][0]=./images/pier1-base-diag.2.2,-64,-96
-#backimage[36][3][0]=./images/pier1-base-diag.2.3,-64,-96
-#
-#backimage[12][0][0]=./images/pier1-base-diag.3.0,-64,-96
-#backimage[12][1][0]=./images/pier1-base-diag.3.1,-64,-96
-#backimage[12][2][0]=./images/pier1-base-diag.3.2,-64,-96
-#backimage[12][3][0]=./images/pier1-base-diag.3.3,-64,-96
-#
-#backimage[04][0][0]=./images/pier1-base-diag.4.0,-64,-96
-#backimage[04][1][0]=./images/pier1-base-diag.4.1,-64,-96
-#backimage[04][2][0]=./images/pier1-base-diag.4.2,-64,-96
-#backimage[04][3][0]=./images/pier1-base-diag.4.3,-64,-96
-#
-#backimage[28][0][0]=./images/pier1-base-diag.5.0,-64,-96
-#backimage[28][1][0]=./images/pier1-base-diag.5.1,-64,-96
-#backimage[28][2][0]=./images/pier1-base-diag.5.2,-64,-96
-#backimage[28][3][0]=./images/pier1-base-diag.5.3,-64,-96
-#
+name=iss_pier2_pillar_diag
+%include 'pier'
+
+icon=> ./images/pier2-pillar-diag.0.0
+cursor=./images/pier2-pillar-diag.0.1,-64,-64
+
+backimage[00][0][0]=./images/pier2-pillar-diag.1.0,-64,-96
+backimage[00][1][0]=./images/pier2-pillar-diag.1.1,-64,-96
+backimage[00][2][0]=./images/pier2-pillar-diag.1.2,-64,-96
+backimage[00][3][0]=./images/pier2-pillar-diag.1.3,-64,-96
+
+backimage[36][0][0]=./images/pier2-pillar-diag.2.0,-64,-96
+backimage[36][1][0]=./images/pier2-pillar-diag.2.1,-64,-96
+backimage[36][2][0]=./images/pier2-pillar-diag.2.2,-64,-96
+backimage[36][3][0]=./images/pier2-pillar-diag.2.3,-64,-96
+
+backimage[12][0][0]=./images/pier2-pillar-diag.3.0,-64,-96
+backimage[12][1][0]=./images/pier2-pillar-diag.3.1,-64,-96
+backimage[12][2][0]=./images/pier2-pillar-diag.3.2,-64,-96
+backimage[12][3][0]=./images/pier2-pillar-diag.3.3,-64,-96
+
+backimage[04][0][0]=./images/pier2-pillar-diag.4.0,-64,-96
+backimage[04][1][0]=./images/pier2-pillar-diag.4.1,-64,-96
+backimage[04][2][0]=./images/pier2-pillar-diag.4.2,-64,-96
+backimage[04][3][0]=./images/pier2-pillar-diag.4.3,-64,-96
+
+backimage[28][0][0]=./images/pier2-pillar-diag.5.0,-64,-96
+backimage[28][1][0]=./images/pier2-pillar-diag.5.1,-64,-96
+backimage[28][2][0]=./images/pier2-pillar-diag.5.2,-64,-96
+backimage[28][3][0]=./images/pier2-pillar-diag.5.3,-64,-96
+
+backimage[72][0][0]=./images/pier2-pillar-diag.6.0,-64,-96
+backimage[72][1][0]=./images/pier2-pillar-diag.6.1,-64,-96
+backimage[72][2][0]=./images/pier2-pillar-diag.6.2,-64,-96
+backimage[72][3][0]=./images/pier2-pillar-diag.6.3,-64,-96
+
+backimage[24][0][0]=./images/pier2-pillar-diag.7.0,-64,-96
+backimage[24][1][0]=./images/pier2-pillar-diag.7.1,-64,-96
+backimage[24][2][0]=./images/pier2-pillar-diag.7.2,-64,-96
+backimage[24][3][0]=./images/pier2-pillar-diag.7.3,-64,-96
+
+backimage[08][0][0]=./images/pier2-pillar-diag.8.0,-64,-96
+backimage[08][1][0]=./images/pier2-pillar-diag.8.1,-64,-96
+backimage[08][2][0]=./images/pier2-pillar-diag.8.2,-64,-96
+backimage[08][3][0]=./images/pier2-pillar-diag.8.3,-64,-96
+
+backimage[56][0][0]=./images/pier2-pillar-diag.9.0,-64,-96
+backimage[56][1][0]=./images/pier2-pillar-diag.9.1,-64,-96
+backimage[56][2][0]=./images/pier2-pillar-diag.9.2,-64,-96
+backimage[56][3][0]=./images/pier2-pillar-diag.9.3,-64,-96
+
+---
+name=iss_pier2_deck
+%include 'pier'
+
+icon=> ./images/pier2-deck.0.0
+cursor=./images/pier2-deck.0.1,-64,-64
+
+backimage[80][0][0]=> ./images/pier2-deck.0.0
+backimage[79][0][0]=./images/pier2-deck.0.1,-64,-64
+
+backimage[00][0][0]=./images/pier2-deck.1.0,-64,-96
+backimage[00][1][0]=./images/pier2-deck.1.1,-64,-96
+backimage[00][2][0]=./images/pier2-deck.1.2,-64,-96
+backimage[00][3][0]=./images/pier2-deck.1.3,-64,-96
+
+backimage[36][0][0]=./images/pier2-deck.2.0,-64,-96
+backimage[36][1][0]=./images/pier2-deck.2.1,-64,-96
+backimage[36][2][0]=./images/pier2-deck.2.2,-64,-96
+backimage[36][3][0]=./images/pier2-deck.2.3,-64,-96
+
+backimage[12][0][0]=./images/pier2-deck.3.0,-64,-96
+backimage[12][1][0]=./images/pier2-deck.3.1,-64,-96
+backimage[12][2][0]=./images/pier2-deck.3.2,-64,-96
+backimage[12][3][0]=./images/pier2-deck.3.3,-64,-96
+
+backimage[04][0][0]=./images/pier2-deck.4.0,-64,-96
+backimage[04][1][0]=./images/pier2-deck.4.1,-64,-96
+backimage[04][2][0]=./images/pier2-deck.4.2,-64,-96
+backimage[04][3][0]=./images/pier2-deck.4.3,-64,-96
+
+backimage[28][0][0]=./images/pier2-deck.5.0,-64,-96
+backimage[28][1][0]=./images/pier2-deck.5.1,-64,-96
+backimage[28][2][0]=./images/pier2-deck.5.2,-64,-96
+backimage[28][3][0]=./images/pier2-deck.5.3,-64,-96
+
+backimage[72][0][0]=./images/pier2-deck.6.0,-64,-96
+backimage[72][1][0]=./images/pier2-deck.6.1,-64,-96
+backimage[72][2][0]=./images/pier2-deck.6.2,-64,-96
+backimage[72][3][0]=./images/pier2-deck.6.3,-64,-96
+
+backimage[24][0][0]=./images/pier2-deck.7.0,-64,-96
+backimage[24][1][0]=./images/pier2-deck.7.1,-64,-96
+backimage[24][2][0]=./images/pier2-deck.7.2,-64,-96
+backimage[24][3][0]=./images/pier2-deck.7.3,-64,-96
+
+backimage[08][0][0]=./images/pier2-deck.8.0,-64,-96
+backimage[08][1][0]=./images/pier2-deck.8.1,-64,-96
+backimage[08][2][0]=./images/pier2-deck.8.2,-64,-96
+backimage[08][3][0]=./images/pier2-deck.8.3,-64,-96
+
+backimage[56][0][0]=./images/pier2-deck.9.0,-64,-96
+backimage[56][1][0]=./images/pier2-deck.9.1,-64,-96
+backimage[56][2][0]=./images/pier2-deck.9.2,-64,-96
+backimage[56][3][0]=./images/pier2-deck.9.3,-64,-96
+
+---
