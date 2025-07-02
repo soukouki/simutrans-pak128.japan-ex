@@ -1,5 +1,13 @@
 # Pak128.Japan-Ex+Addons
 
+## Credit
+
+- The Pak128.Japan-Ex+Addons Team
+  - sou7
+  - Physka
+  - Fairy's Simutrans STUDIO.(AoharaMaika/Kamiyan Plarail Industry.)
+  - Kawanami
+
 ## LICENSE ライセンス
 
 このリポジトリは複数のライセンスの下で提供されているソースコードとバイナリを含みます。各ディレクトリ・ファイルごとに異なるライセンスが適用されます。
@@ -129,6 +137,27 @@ The PNG files and datt files located under `roadsign/ooboke` are modified versio
 > 改造及びその公開等はご自由にどうぞ。
 
 私達は上記の許諾に基づき、大ぼけ氏が作成した元作品を元作者の条件のもとで利用し、改造部分のみを [CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
+
+Based on the above permission, we use Ooboke's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
+
+### kannami
+
+- Original work
+  - 函南 (kannami)
+- Modifications
+  - The Pak128.Japan-Ex+Addons Team
+
+`roadsign/kannami`以下のPNGファイルとdattファイルは、函南氏の[ATC標識型信号機](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool)に改造を加えたものです。
+
+The PNG files and datt files located under `roadsign/kannami` are modified versions of Ooboke's [ATC Railroad signs](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool).
+
+> 自由に改造、再配布、改造再配布可能です。
+> 原作者の名前は記載して下さい。
+
+私達は上記の許諾に基づき、函南氏が作成した元作品を元作者の条件のもとで利用し、改造部分のみを [CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
+
+Based on the above permission, we use Kannami's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
+
 ### makeobj
 
 - Authors
@@ -140,10 +169,4 @@ The PNG files and datt files located under `roadsign/ooboke` are modified versio
 
 The executable files found in the `makeobj` directory are built from the [Simutrans-Extended](https://github.com/jamespetts/simutrans-extended) source code without modification. This executable is distributed under the terms of the Artistic License. For the full license text, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-extended/blob/4dab37b/LICENSE.txt).
 
-## Credit
 
-- The Pak128.Japan-Ex+Addons Team
-  - sou7
-  - Physka
-  - Fairy's Simutrans STUDIO.(AoharaMaika/Kamiyan Plarail Industry.)
-  - Kawanami
