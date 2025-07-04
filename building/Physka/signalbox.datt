@@ -1,0 +1,12 @@
+%require '../signalboxes.datt'
+
+---
+name=small_signalbox
+%include 'signalboxes'
+
+icon=> #{img_file}.0.4
+cursor=#{img_file}.0.0
+backimage[0][0][0][0][0][0]=#{img_file}.0.0
+backimage[1][0][0][0][0][0]=#{img_file}.0.1
+backimage[2][0][0][0][0][0]=#{img_file}.0.2
+backimage[3][0][0][0][0][0]=#{img_file}.0.3

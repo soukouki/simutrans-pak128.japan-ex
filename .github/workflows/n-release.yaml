@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  create-version-tag-and-release:
+  n-release:
     runs-on: ubuntu-latest
     permissions:
       contents: write

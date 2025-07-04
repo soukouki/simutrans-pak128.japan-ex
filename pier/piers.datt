@@ -1,0 +1,31 @@
+---
+
+%resource 'pier'
+%%addon excel!('addon') == '含'
+%%ja excel('japanese')
+%%en excel('english')
+intro_year=#{excel('intro_year')}
+intro_month=#{excel('intro_month') || 1}
+obj=pier
+cost=50000
+maintenance=1000
+topspeed=#{excel('topspeed')}
+max_weight=#{excel('max_weight')}
+
+above_way_ribi=#{(excel('aboveribi').include?("北")?1:0)+(excel('aboveribi').include?("東")?2:0)+(excel('aboveribi').include?("南")?4:0)+(excel('aboveribi').include?("西")?8:0)}
+below_way_ribi=#{(excel('belowribi').include?("北")?1:0)+(excel('belowribi').include?("東")?2:0)+(excel('belowribi').include?("南")?4:0)+(excel('belowribi').include?("西")?8:0)}
+drag_ribi=#{(excel('dragribi').include?("北")?1:0)+(excel('dragribi').include?("東")?2:0)+(excel('dragribi').include?("南")?4:0)+(excel('dragribi').include?("西")?8:0)}
+auto_group=#{excel('auto_group')}
+auto_height=#{excel('auto_height')}
+base_mask=#{excel('base_mask')}
+middle_mask=#{excel('middle_mask')}
+support_mask=#{excel('support_mask')}
+base_mask_2=#{excel('base_mask_2')}
+middle_mask_2=#{excel('middle_mask_2')}
+support_mask_2=#{excel('support_mask_2')}
+sub_obj_mask=#{excel('sub_obj_mask')}
+deck_obj_mask=#{excel('deck_obj_mask')}
+above_slope=#{excel('above_slope')}
+max_altitude=#{excel('max_altitude')}
+
+---

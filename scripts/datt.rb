@@ -39,6 +39,8 @@ module Datt
   COMMENT_LINE = /^#(.*)$/
   # ディレクティブ
   DIRECTIVE_LINE = /^%(.+)$/
+  # 遅延ディレクティブ
+  DELAYED_DIRECTIVE_LINE = /^%%(.+)$/
   # 空行
   BLANK_LINE = /^$/
   # 画像指定の右辺
@@ -71,6 +73,8 @@ module Datt
           @type = :assign
         when BLANK_LINE
           @type = :blank
+        when DELAYED_DIRECTIVE_LINE
+          @type = :delayed_directive
         when DIRECTIVE_LINE
           @type = :directive
         else
@@ -194,7 +198,13 @@ module Datt
         end
       end
       block.lines.each do |l|
-        if l =~ ASSIGN_LINE && @dat_variables.include?($1.downcase.to_sym)
+        if l =~ DELAYED_DIRECTIVE_LINE
+          # 遅延ディレクティブの場合、%を一つ減らして、後で評価する
+          @lines << l[1..-1]
+        elsif l =~ DIRECTIVE_LINE
+          # ディレクティブの場合、評価する
+          eval_derective($1)
+        elsif l =~ ASSIGN_LINE && @dat_variables.include?($1.downcase.to_sym)
           @lines << '#' + l
         else
           @lines << l
@@ -232,6 +242,7 @@ module Datt
       worksheet.each_with_index do |row, row_index|
         next if row_index <= 2 # 1行目はラベル、2行目はその説明なのでスキップ
         name_pos = labels["name"]
+        next if row.nil?
         name = row[name_pos]&.value&.strip
         # nameのセルが空ならスキップ
         next if name.nil? || name.empty?
@@ -246,7 +257,7 @@ module Datt
     end
 
     # Excelで読み込んだパラメータを参照するための関数
-    def excel(name = nil, key)
+    def excel(key, name = nil)
       name ||= @dat_variables[:name]
       raise <<~EOS if @excel_variables == {}
         Excel parameters not found. Please use %require_excel directive to load parameters from an Excel file.
@@ -257,6 +268,16 @@ module Datt
         '#{name}'のExcelパラメータが見つかりません。名前を確認してください。
       EOS
       @excel_variables[name][key]
+    end
+
+    # excel関数と同じだが、パラメータが無いときにエラーを出す
+    def excel!(key, name = nil)
+      value = excel(key, name)
+      raise <<~EOS if value.nil?
+        Excel parameter '#{key}' for '#{name}' not found.
+        '#{name}'のExcelパラメータ '#{key}' が見つかりません。
+      EOS
+      value
     end
 
     # ● #addonに値を設定する。
@@ -290,6 +311,58 @@ module Datt
       @addon = false
     end
 
+    # jatabファイルを出力する。
+    def do_ja(ja_name)
+      $jatab.puts @dat_variables[:name]
+      $jatab.puts ja_name
+    end
+
+    # entabファイルを出力する。
+    def do_en(en_name)
+      $entab.puts @dat_variables[:name]
+      $entab.puts en_name
+    end
+
+    # Rubyのファイルを読み込む。全て相対パスで扱う
+    # このコマンドは必ず.rb拡張子までfilenameに指定する必要がある
+    def do_require_ruby(filename)
+      if filename !~ /\.rb$/
+        $stderr.puts <<~EOS
+          %require_ruby directive requires a filename with .rb extension.
+          %require_rubyディレクティブは、.rb拡張子を持つファイル名を指定する必要があります。
+        EOS
+        raise ArgumentError, 'filename must end with .rb'
+      end
+      filename = File.expand_path(filename, File.dirname(@filename))
+      begin
+        require filename
+      rescue LoadError => e
+        $stderr.puts <<~EOS
+          Ruby file '#{filename}' is not found or is not a valid Ruby file.
+          Rubyファイル '#{filename}' が見つからないか、正しいRubyファイルではありません。
+          
+          以下例外メッセージ
+          #{e.message}
+        EOS
+        raise e
+      end
+    end
+
+    # 入力された文字列を行単位に分解して、linesに追加する。
+    def do_lines(lines)
+      lines.each_line do |line|
+        line.strip!
+        next if line.empty? # 空行はスキップ
+        if line.start_with?('#')
+          # コメント行はそのまま追加
+          push_dat_line line
+        else
+          # その他の行は評価して追加
+          push_dat_line eval_macro(line)
+        end
+      end
+    end
+
     # ソースを評価し、出力対象ならdatを出力する
     def eval_block(lexer)
       @location = lexer.location
@@ -298,7 +371,9 @@ module Datt
       loop do
         case lexer.type
         when :directive
-          instance_eval 'do_' + lexer.last_match[1]
+          eval_derective(lexer.last_match[1])
+        when :delayed_directive
+          @lines << "%#{lexer.last_match[1]}"
         when :assign, :comment, :blank, :unknown
           push_dat_line lexer.line
         else
@@ -310,6 +385,13 @@ module Datt
       @workspace.blocks << self if @dat_variables.include?(:name)
 
       write_dat_block if write_dat_block?
+    end
+
+    def eval_derective(arg)
+      instance_eval "do_#{arg}"
+    rescue SyntaxError => e
+      $stderr.puts "#{@location}: syntax error in directive: %#{arg}"
+      raise e
     end
 
     # 評価結果に一行付け加える
@@ -339,6 +421,9 @@ module Datt
     def eval_macro(line)
       line.gsub(/#\{(.+?)\}/) do |m|
         instance_eval($1)
+      rescue SyntaxError => e
+        $stderr.puts "#{@location}: syntax error in macro: #{m}"
+        raise e
       end
     end
 
@@ -355,7 +440,8 @@ module Datt
 
     # メンバが見つからない場合は、datの属性を参照させる。
     def method_missing(sym, *args)
-      @dat_variables[sym] || fail("unknown method: #{sym}")
+      return @dat_variables[sym] if @dat_variables.include?(sym)
+      fail "unknown method: #{sym}"
     end
 
     # ファイル名
