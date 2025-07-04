@@ -348,6 +348,21 @@ module Datt
       end
     end
 
+    # 入力された文字列を行単位に分解して、linesに追加する。
+    def do_lines(lines)
+      lines.each_line do |line|
+        line.strip!
+        next if line.empty? # 空行はスキップ
+        if line.start_with?('#')
+          # コメント行はそのまま追加
+          push_dat_line line
+        else
+          # その他の行は評価して追加
+          push_dat_line eval_macro(line)
+        end
+      end
+    end
+
     # ソースを評価し、出力対象ならdatを出力する
     def eval_block(lexer)
       @location = lexer.location

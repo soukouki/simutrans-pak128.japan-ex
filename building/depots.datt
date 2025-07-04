@@ -16,4 +16,6 @@ noconstruction=1
 
 waytype=#{excel!('waytype')}
 
+%%lines (excel('traction_type') || '').split(',').map.with_index{|t, i|"traction_type[#{i}]=#{t}"}.join("\n")
+
 ---
