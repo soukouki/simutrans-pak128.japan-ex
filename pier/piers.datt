@@ -26,6 +26,6 @@ support_mask_2=#{excel('support_mask_2')}
 sub_obj_mask=#{excel('sub_obj_mask')}
 deck_obj_mask=#{excel('deck_obj_mask')}
 above_slope=#{excel('above_slope')}
-
+max_altitude=#{excel('max_altitude')}
 
 ---
