@@ -170,7 +170,7 @@ name=AB_semaphore_distant_signal
 
 icon=> #{img_file}.5.5
 cursor=#{img_file}.5.0
-#停止
+#注意
 Image[0]=#{img_file}.5.0
 Image[1]=#{img_file}.5.1
 Image[2]=#{img_file}.5.2
@@ -180,30 +180,25 @@ Image[4]=#{img_file}.6.0
 Image[5]=#{img_file}.6.1
 Image[6]=#{img_file}.6.2
 Image[7]=#{img_file}.6.3
-#注意
-Image[8]=#{img_file}.7.0
-Image[9]=#{img_file}.7.1
-Image[10]=#{img_file}.7.2
-Image[11]=#{img_file}.7.3
 ---
 
 name=AB_semaphore_home_signal
 %include 'roadsign'
 
-icon=> #{img_file}.8.5
-cursor=#{img_file}.8.0
+icon=> #{img_file}.7.5
+cursor=#{img_file}.7.0
 #停止
-Image[0]=#{img_file}.8.0
-Image[1]=#{img_file}.8.1
-Image[2]=#{img_file}.8.2
-Image[3]=#{img_file}.8.3
-#進行
-Image[4]=#{img_file}.9.0
-Image[5]=#{img_file}.9.1
-Image[6]=#{img_file}.9.2
-Image[7]=#{img_file}.9.3
-#注意
-Image[8]=#{img_file}.10.0
-Image[9]=#{img_file}.10.1
-Image[10]=#{img_file}.10.2
-Image[11]=#{img_file}.10.3
+Image[0]=#{img_file}.7.0
+Image[1]=#{img_file}.7.1
+Image[2]=#{img_file}.7.2
+Image[3]=#{img_file}.7.3
+#本線進行
+Image[4]=#{img_file}.8.0
+Image[5]=#{img_file}.8.1
+Image[6]=#{img_file}.8.2
+Image[7]=#{img_file}.8.3
+#副本線進行
+Image[8]=#{img_file}.9.0
+Image[9]=#{img_file}.9.1
+Image[10]=#{img_file}.9.2
+Image[11]=#{img_file}.9.3
