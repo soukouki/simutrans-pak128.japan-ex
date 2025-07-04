@@ -1,0 +1,24 @@
+---
+
+# シティーカー
+%resource 'citycar'
+
+%%addon excel!('addon') == '含'
+
+%%ja excel!('japanese')
+%%en excel!('english')
+
+obj=citycar
+
+intro_year=#{excel!('intro_year')}
+intro_month=#{excel('intro_month') || 1}
+retire_year=#{excel('retire_year') || 9999}
+retire_month=#{excel('retire_month') || 1}
+
+# Pak128.Britain-Exを見ると、1から20程度の値を設定していた。
+# 中でも5前後の値を設定していることが多かったので、それをデフォルトとする
+DistributionWeight=#{excel('distribution_weight') || 5}
+
+speed=#{excel!('topspeed')}
+
+---

@@ -3,7 +3,6 @@
 ---
 # @text ja:[地上] 木まくらぎ軌道（単）
 # @text en:[Ground] Wood tie track (single)
-obj=way
 name=iss_wtg_0120_single
 copyright=128na
 %include 'track'
@@ -50,7 +49,6 @@ image[nsew2][0]=standard_wood_g_single.5.9,-64,-32
 ---
 # @text ja:[地上] 木まくらぎ軌道（前）
 # @text en:[Ground] Wood tie track (front)
-obj=way
 name=iss_wtg_0120_front
 copyright=128na
 %include 'track'
@@ -97,7 +95,6 @@ image[nsew2][0]=standard_wood_g_front.5.4,-64,-32
 ---
 # @text ja:[地上] 木まくらぎ軌道（中）
 # @text en:[Ground] Wood tie track (center)
-obj=way
 name=iss_wtg_0120_center
 copyright=128na
 %include 'track'
@@ -134,7 +131,6 @@ image[nsew][0]=standard_wood_g_center.3.4,-64,-32
 ---
 # @text ja:[地上] 木まくらぎ軌道（後）
 # @text en:[Ground] Wood tie track (back)
-obj=way
 name=iss_wtg_0120_back
 copyright=128na
 %include 'track'
