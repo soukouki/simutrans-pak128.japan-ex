@@ -2,7 +2,7 @@
 %require_ruby 'util_roadsign.rb'
 %%ja excel('japanese')
 %%en excel('english')
-%%def :img, excel('img_file')
+%%def :img_file, excel('img_file')
 
 obj=roadsign
 copyright=#{excel('copyright')}
