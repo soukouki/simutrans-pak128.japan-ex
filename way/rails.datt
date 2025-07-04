@@ -3,6 +3,7 @@
 # 鉄道軌道全般(併用軌道を含む)
 %resource 'track'
 
+obj=way
 %%addon excel!('addon') == '含'
 
 %%ja excel!('japanese')
