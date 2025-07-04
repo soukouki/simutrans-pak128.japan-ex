@@ -1,0 +1,68 @@
+---
+
+# building用のテンプレート
+# 直接includeするのではなく、一旦depotやheadquarterなどのテンプレートにincludeするようにして扱う
+
+%resource 'building'
+
+%require_ruby 'class.rb'
+
+obj=building
+%%%addon excel!('addon') == '含'
+%%%ja excel!('japanese')
+%%%en excel!('english')
+
+%%%def :intro_year_, excel('intro_year') || 1
+intro_year=#{intro_year_}
+intro_month=#{excel('intro_month') || 1}
+retire_year=#{excel('retire_year') || 9999}
+retire_month=#{excel('retire_month') || 1}
+
+# typeに関しては、各dattファイルで設定する
+
+level=#{excel!('level') || 1}
+
+# tourist_base_trendは最高、高、中、低、最低の5段階で設定する。
+# それぞれ、資産家、高所得者、中流階級、労働者、低所得者に対応する。
+# 1870年から2020年までの150年間で、meanを1上げるように補正する。1870年より前の補正は0、2020年以降の補正は1にする。
+# そこから標準偏差(σ)の正規分布に従ってクラス別比率を設定する。
+
+# 居住者・観光客
+population_and_visitor_demand_capacity=#{excel('demand_capacity') || 10}
+%%%def :tourists_mean_base, {"最低" => 0, "低" => 1, "中" => 2, "高" => 3, "最高" => 4}[excel('tourists_base_trend') || '低']
+%%%def :tourists_mean_adjustment, ((intro_year_ - 1870) / 150.0).clamp(0, 1)
+%%%def :tourists_mean, tourists_mean_base + tourists_mean_adjustment
+%%%def :tourists_sigma, excel('tourists_sigma') || 1
+%%%def :tourists_calc, class_probs(tourists_mean, tourists_sigma).map{|p|(p * 100).round}
+%%%def :tourists_override, excel('tourists_override')&.split(',')&.map(&:to_i)
+%%%def :tourists, tourists_override || tourists_calc
+class_proportion[0]=#{tourists[0]}
+class_proportion[1]=#{tourists[1]}
+class_proportion[2]=#{tourists[2]}
+class_proportion[3]=#{tourists[3]}
+class_proportion[4]=#{tourists[4]}
+class_proportion[5]=#{tourists[5]}
+
+# 通勤客
+employment_capacity=#{excel('employment_capacity') || 60}
+%%%def :commuters_mean, {"最低" => 0, "低" => 1, "中" => 2, "高" => 3, "最高" => 4}[excel('commuters_base_trend') || '低']
+%%%def :commuters_mean_adjustment, ((intro_year_ - 1870) / 150.0).clamp(0, 1)
+%%%def :commuters_mean, commuters_mean + commuters_mean_adjustment
+%%%def :commuters_sigma, excel('commuters_sigma') || 1
+%%%def :commuters_calc, class_probs(commuters_mean, commuters_sigma).map{|p|(p * 100).round}
+%%%def :commuters_override, excel('commuters_override')&.split(',')&.map(&:to_i)
+%%%def :commuters, commuters_override || commuters_calc
+class_proportion_jobs[0]=#{commuters[0]}
+class_proportion_jobs[1]=#{commuters[1]}
+class_proportion_jobs[2]=#{commuters[2]}
+class_proportion_jobs[3]=#{commuters[3]}
+class_proportion_jobs[4]=#{commuters[4]}
+class_proportion_jobs[5]=#{commuters[5]}
+
+mail_demand=#{excel!('mail_demand') || 10}
+
+# TODO: under_pier_okを設定する
+
+pier_sub_needed=#{excel('pier_sub_needed') == '高架下のみ' ? 1 : 0}
+
+---

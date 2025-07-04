@@ -1,0 +1,21 @@
+%require 'buildings.datt'
+%require_excel 'depots.xlsx'
+
+---
+
+%resource 'depot'
+
+type=depot
+
+%include 'building'
+
+%%def :allow_underground_, {"地上のみ" => 0, "地下のみ" => 1, "地上・地下" => 2}[excel('allow_underground') || '地上のみ']
+allow_underground=#{allow_underground_}
+
+noconstruction=1
+
+waytype=#{excel!('waytype')}
+
+%%lines (excel('traction_type') || '').split(',').map.with_index{|t, i|"traction_type[#{i}]=#{t}"}.join("\n")
+
+---

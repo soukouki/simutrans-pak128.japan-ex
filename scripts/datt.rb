@@ -242,6 +242,7 @@ module Datt
       worksheet.each_with_index do |row, row_index|
         next if row_index <= 2 # 1行目はラベル、2行目はその説明なのでスキップ
         name_pos = labels["name"]
+        next if row.nil?
         name = row[name_pos]&.value&.strip
         # nameのセルが空ならスキップ
         next if name.nil? || name.empty?
@@ -347,6 +348,21 @@ module Datt
       end
     end
 
+    # 入力された文字列を行単位に分解して、linesに追加する。
+    def do_lines(lines)
+      lines.each_line do |line|
+        line.strip!
+        next if line.empty? # 空行はスキップ
+        if line.start_with?('#')
+          # コメント行はそのまま追加
+          push_dat_line line
+        else
+          # その他の行は評価して追加
+          push_dat_line eval_macro(line)
+        end
+      end
+    end
+
     # ソースを評価し、出力対象ならdatを出力する
     def eval_block(lexer)
       @location = lexer.location
@@ -373,6 +389,9 @@ module Datt
 
     def eval_derective(arg)
       instance_eval "do_#{arg}"
+    rescue SyntaxError => e
+      $stderr.puts "#{@location}: syntax error in directive: %#{arg}"
+      raise e
     end
 
     # 評価結果に一行付け加える
@@ -402,6 +421,9 @@ module Datt
     def eval_macro(line)
       line.gsub(/#\{(.+?)\}/) do |m|
         instance_eval($1)
+      rescue SyntaxError => e
+        $stderr.puts "#{@location}: syntax error in macro: #{m}"
+        raise e
       end
     end
 
@@ -418,7 +440,8 @@ module Datt
 
     # メンバが見つからない場合は、datの属性を参照させる。
     def method_missing(sym, *args)
-      @dat_variables[sym] || fail("unknown method: #{sym}")
+      return @dat_variables[sym] if @dat_variables.include?(sym)
+      fail "unknown method: #{sym}"
     end
 
     # ファイル名
