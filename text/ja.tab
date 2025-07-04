@@ -27,24 +27,24 @@ Sign
 Apron/Airport
 エプロン/空港
 Permissive 2-0
-地下鉄
-Permissive 2-1
-直流600V-750V
-Permissive 2-2
-直流1500V
-Permissive 2-3
-交流20kV
-Permissive 2-4
-交流25kV
-Prohibitive 2-0
 762mm
-Prohibitive 2-1
+Permissive 2-1
 1067mm
-Prohibitive 2-2
+Permissive 2-2
 1372mm
-Prohibitive 2-3
+Permissive 2-3
 1435mm
-Prohibitive 2-4
+Permissive 2-4
 架線
-Prohibitive 2-5
+Permissive 2-5
 三線軌条
+Prohibitive 2-0
+地下鉄
+Prohibitive 2-1
+直流600V-750V
+Prohibitive 2-2
+直流1500V
+Prohibitive 2-3
+交流20kV
+Prohibitive 2-4
+交流25kV

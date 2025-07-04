@@ -1,22 +1,22 @@
 Permissive 2-0
-Subway
-Permissive 2-1
-DC 600V–750V
-Permissive 2-2
-DC 1500V
-Permissive 2-3
-AC 20kV
-Permissive 2-4
-AC 25kV
-Prohibitive 2-0
 762mm
-Prohibitive 2-1
+Permissive 2-1
 1067mm
-Prohibitive 2-2
+Permissive 2-2
 1372mm
-Prohibitive 2-3
+Permissive 2-3
 1435mm
-Prohibitive 2-4
+Permissive 2-4
 Overhead catenary
-Prohibitive 2-5
-Triple-track configuration
+Permissive 2-5
+Triple-track
+Prohibitive 2-0
+Subway
+Prohibitive 2-1
+DC 600V–750V
+Prohibitive 2-2
+DC 1500V
+Prohibitive 2-3
+AC 20kV
+Prohibitive 2-4
+AC 25kV

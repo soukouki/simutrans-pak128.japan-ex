@@ -31,12 +31,11 @@ maintenance=#{(500 * (excel('maintenance_coefficient') || 1)).round}
 %%def :wear_capacity_, [(0.3*cost_**2 - 1000*cost_), 5000000000].min
 wear_capacity=#{(wear_capacity_ * (excel('wear_coefficient') || 1).round)}
 
-# way_constraint_permissiveは設定する必要がない
 %%def :gauge, excel('gauge') || 'すべて'
 # 本体のコードを読んだところ、255を指定すると無視されることが分かった。今回は無視したいので、255を設定する。
-way_constraint_prohibitive[0]=#{gauge == 'すべて' || gauge == '762mm'  ? 0 : 255}
-way_constraint_prohibitive[1]=#{gauge == 'すべて' || gauge == '1067mm' ? 1 : 255}
-way_constraint_prohibitive[2]=#{gauge == 'すべて' || gauge == '1372mm' ? 2 : 255}
-way_constraint_prohibitive[3]=#{gauge == 'すべて' || gauge == '1435mm' ? 3 : 255}
+way_constraint_permissive[0]=#{gauge == 'すべて' || gauge == '762mm'  ? 0 : 255}
+way_constraint_permissive[1]=#{gauge == 'すべて' || gauge == '1067mm' ? 1 : 255}
+way_constraint_permissive[2]=#{gauge == 'すべて' || gauge == '1372mm' ? 2 : 255}
+way_constraint_permissive[3]=#{gauge == 'すべて' || gauge == '1435mm' ? 3 : 255}
 
 ---
