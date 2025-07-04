@@ -20,7 +20,7 @@ retire_month=#{excel('retire_month') || 1}
 
 # typeに関しては、各dattファイルで設定する
 
-level=#{excel!('level') || 1}
+level=#{excel('level') || 1}
 
 # tourist_base_trendは最高、高、中、低、最低の5段階で設定する。
 # それぞれ、資産家、高所得者、中流階級、労働者、低所得者に対応する。
