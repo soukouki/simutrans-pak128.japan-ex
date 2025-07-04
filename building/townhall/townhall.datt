@@ -1,0 +1,15 @@
+%require '../buildings.datt'
+%require_excel 'townhall.xlsx'
+
+---
+
+%resource 'townhall'
+%include 'building'
+
+type=tow
+noconstruction=1
+needs_ground=1
+
+build_time=#{excel('build_time')}
+
+---
