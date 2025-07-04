@@ -242,6 +242,7 @@ module Datt
       worksheet.each_with_index do |row, row_index|
         next if row_index <= 2 # 1行目はラベル、2行目はその説明なのでスキップ
         name_pos = labels["name"]
+        next if row.nil?
         name = row[name_pos]&.value&.strip
         # nameのセルが空ならスキップ
         next if name.nil? || name.empty?
@@ -373,6 +374,9 @@ module Datt
 
     def eval_derective(arg)
       instance_eval "do_#{arg}"
+    rescue SyntaxError => e
+      $stderr.puts "#{@location}: syntax error in directive: %#{arg}"
+      raise e
     end
 
     # 評価結果に一行付け加える
@@ -402,6 +406,9 @@ module Datt
     def eval_macro(line)
       line.gsub(/#\{(.+?)\}/) do |m|
         instance_eval($1)
+      rescue SyntaxError => e
+        $stderr.puts "#{@location}: syntax error in macro: #{m}"
+        raise e
       end
     end
 
@@ -418,7 +425,8 @@ module Datt
 
     # メンバが見つからない場合は、datの属性を参照させる。
     def method_missing(sym, *args)
-      @dat_variables[sym] || fail("unknown method: #{sym}")
+      return @dat_variables[sym] if @dat_variables.include?(sym)
+      fail "unknown method: #{sym}"
     end
 
     # ファイル名
