@@ -1,27 +1,9 @@
-﻿---
 
-# シティーカー
-%resource 'citycar'
-
-%%addon excel!('addon') == '含'
-
-%%ja excel!('japanese')
-%%en excel!('english')
-
-obj=citycar
+%require '../citycar.datt'
+---
 name=FSS_S207
-
-intro_year=excel!('intro_year')
-intro_month=excel('intro_month') || 1
-retire_year=excel('retire_year') || 9999
-retire_month{excel('retire_month') || 1
-
-# Pak128.Britain-Exを見ると、1から20程度の値を設定していた。
-# 中でも5前後の値を設定していることが多かったので、それをデフォルトとする
-DistributionWeight=excel('distribution_weight') || 5
-
-speed=#{excel!('topspeed')}
-
+copyright=AoharaMaika
+%include 'citycar'
 Image[S]=S207.0.0
 Image[N]=S207.0.1
 Image[E]=S207.0.2
@@ -31,4 +13,3 @@ Image[NW]=S207.0.5
 Image[NE]=S207.0.6
 Image[SW]=S207.0.7
 
----
