@@ -21,6 +21,7 @@ PAK_DIRS = {
     symbol
   ],
   128 => %w[
+    citycar
     cursor
     goods
     ground

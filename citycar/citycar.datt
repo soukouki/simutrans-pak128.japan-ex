@@ -1,3 +1,5 @@
+
+%require_excel 'citycar.xlsx'
 ---
 
 # シティーカー
@@ -19,6 +21,6 @@ retire_month=#{excel('retire_month') || 1}
 # 中でも5前後の値を設定していることが多かったので、それをデフォルトとする
 DistributionWeight=#{excel('distribution_weight') || 5}
 
-speed=#{excel!('topspeed')}
+speed=#{excel!('speed')}
 
 ---
