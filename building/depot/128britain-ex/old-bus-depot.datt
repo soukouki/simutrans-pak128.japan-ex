@@ -1,4 +1,4 @@
-%require '../../depot.datt'
+%require '../depot.datt'
 ---
 Name=OldRoadDepotSteam
 %include 'depot'
