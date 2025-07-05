@@ -1,9 +1,9 @@
-%require 'buildings.datt'
-%require_excel 'signalboxes.xlsx'
+%require '../building.datt'
+%require_excel 'signalbox.xlsx'
 
 ---
 
-%resource 'signalboxes'
+%resource 'signalbox'
 
 type=signalbox
 

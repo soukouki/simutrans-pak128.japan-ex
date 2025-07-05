@@ -1,5 +1,5 @@
-%require '../../rails.datt'
-%require_excel '../../rails.xlsx'
+%require '../../rail.datt'
+%require_excel '../../rail.xlsx'
 ---
 # @text ja:[地上] 低速トラム軌道
 # @text en:[Ground] Low speed tram track
