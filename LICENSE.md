@@ -34,9 +34,9 @@ Under the above permissions, we will use the original work created by the Pak128
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, `way-object/track/128japan`以下のpngファイルとdattファイルは、[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)を元に改造したものです。
+`building/stop-track/128japan`, `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, `way-object/track/128japan`以下のpngファイルとdattファイルは、[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)を元に改造したものです。
 
-The PNG files and datt files listed below under `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, and `way-object/track/128japan` have been modified based on [PAK128.Japan](http://pak128.jpn.org/index.htm.ja).
+The PNG files and datt files listed below under `building/stop-track/128japan`, `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, and `way-object/track/128japan` have been modified based on [PAK128.Japan](http://pak128.jpn.org/index.htm.ja).
 
 > 自分が作ったものについては自由に使っていただいて構いません。  
 > 派生版を作っていただいて構いませんし、それを公開するのも自由です。

@@ -21,15 +21,20 @@ PAK_DIRS = {
     symbol
   ],
   128 => %w[
+    building/depot
+    building/signalbox
+    building/townhall
     citycar
     cursor
     goods
     ground
-    way/128britain-ex
     misc
     roadsign
-    building
+    way/128britain-ex
     way-object/track/128jp
+  ],
+  192 => %w[
+    building/stop-track
   ],
   256 => %w[
     pier/iss
