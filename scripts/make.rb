@@ -31,7 +31,7 @@ PAK_DIRS = {
     misc
     roadsign
     way/128britain-ex
-    way-object/track/128jp
+    way-object/track/128japan
   ],
   192 => %w[
     building/stop-track
