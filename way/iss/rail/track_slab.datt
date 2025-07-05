@@ -1,5 +1,5 @@
-%require '../../rails.datt'
-%require_excel '../../rails.xlsx'
+%require '../../rail.datt'
+%require_excel '../../rail.xlsx'
 ---
 # @text ja:[地上] スラブ軌道（単）
 # @text en:[Ground] Slab track (single)
