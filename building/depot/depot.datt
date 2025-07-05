@@ -1,5 +1,5 @@
-%require 'buildings.datt'
-%require_excel 'depots.xlsx'
+%require '../building.datt'
+%require_excel 'depot.xlsx'
 
 ---
 

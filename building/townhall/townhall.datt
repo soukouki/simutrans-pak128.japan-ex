@@ -1,4 +1,4 @@
-%require '../buildings.datt'
+%require '../building.datt'
 %require_excel 'townhall.xlsx'
 
 ---
