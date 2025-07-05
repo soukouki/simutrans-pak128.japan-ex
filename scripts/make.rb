@@ -33,6 +33,7 @@ PAK_DIRS = {
   256 => %w[
     way/iss
     pier/iss
+    crossing
   ],
 }
 
