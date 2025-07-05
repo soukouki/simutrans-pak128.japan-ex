@@ -21,15 +21,20 @@ PAK_DIRS = {
     symbol
   ],
   128 => %w[
+    building/depot
+    building/signalbox
+    building/townhall
     citycar
     cursor
     goods
     ground
-    way/128britain-ex
     misc
     roadsign
-    building
-    way-object/track/128jp
+    way/128britain-ex
+    way-object/track/128japan
+  ],
+  192 => %w[
+    building/stop-track
   ],
   256 => %w[
     pier/iss
@@ -40,7 +45,9 @@ PAK_DIRS = {
 
 PAK_DIRS_HASH = PAK_DIRS.map{|size, dirs| dirs.map{|dir| [dir, size]} }.flatten(1).to_h
 
-THREAD_COUNT = 6 # GitHub ActionsのThread数が4らしいので、おまけして6スレッドにした
+# 謎のエラーが起きるようになり、スレッド数を1にしたら解決したので暫定的に1スレッドに設定
+# 6スレッドだとたまに成功し、100スレッドだとほぼ必ず失敗する
+THREAD_COUNT = 1
 
 VERSION = ENV['VERSION'] || 'dev'
 
