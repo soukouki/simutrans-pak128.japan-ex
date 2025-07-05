@@ -34,7 +34,9 @@ Under the above permissions, we will use the original work created by the Pak128
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`以下のpngファイルとdattファイルは、[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)を元に改造したものです。
+`cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, `way-object/track/128japan`以下のpngファイルとdattファイルは、[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)を元に改造したものです。
+
+The PNG files and datt files listed below under `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, and `way-object/track/128japan` have been modified based on [PAK128.Japan](http://pak128.jpn.org/index.htm.ja).
 
 > 自分が作ったものについては自由に使っていただいて構いません。  
 > 派生版を作っていただいて構いませんし、それを公開するのも自由です。
@@ -86,9 +88,9 @@ Based on the above permission, we use Gobanboshi's original work under the origi
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`way/iss`および`pier/iss`以下のPNGファイルとdattファイルは、128na氏の[それなりにそれっぽいインフラアドオン集](https://128na.github.io/iss/)を元に改造を加えたものです。
+`pier/iss`, `way/iss`, `way-object/track/iss`以下のPNGファイルとdattファイルは、128na氏の[それなりにそれっぽいインフラアドオン集](https://128na.github.io/iss/)を元に改造を加えたものです。
 
-The PNG files and datt files located under `way/iss` and `pier/iss` are modified versions of 128na's [Infrastructure of Sorenarini Soreppoi series](https://128na.github.io/iss/).
+The PNG files and datt files under `pier/iss`, `way/iss`, and `way-object/track/iss` are based on [this reasonably convincing infrastructure add-on collection](https://128na.github.io/iss/) by user 128na, with modifications made to the original files.
 
 元作品は[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](http://creativecommons.org/licenses/by/4.0/)の元で配布されています。改造部分については、[CC BY 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供します。利用時は両方の条件を遵守してください。
 
