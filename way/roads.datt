@@ -1,0 +1,35 @@
+---
+
+# 道路全般
+%resource 'road'
+
+obj=way
+%%addon excel!('addon') == '含'
+
+%%ja excel!('japanese')
+%%en excel!('english')
+copyright=excel('copyright')
+%%def :intro_year_, excel!('intro_year')
+%%def :max_weight_, excel!('max_weight')
+%%def :topspeed_,   excel!('topspeed')
+%%def :img_file, excel('img_file')
+
+intro_year=#{intro_year_}
+intro_month=#{excel('intro_month') || 1}
+# 引退を設定すると、引退後に道路のアップデートが行われると、別の種類の線路に置き換えられてしまう。なので、その対策として基本的に引退はさせないことにした。
+retire_year=#{excel('retire_year') || 9999}
+retire_month=#{excel('retire_month') || 1}
+
+topspeed=#{topspeed_}
+max_weight=#{max_weight_}
+system_type=0
+waytype=#{excel!('waytype')}
+
+%%def :cost_, (0.7*(1.48*topspeed_**2 + 359*topspeed_) + 0.3*(199*max_weight_**2 + 1267*max_weight_))
+cost=#{(cost_ * (excel('cost_coefficient') || 1)).round}
+# Pak128.Britain-Exのパラメータを見たところ、維持費について規則性を読み取れなかった。すべて同じ値を設定することにした。
+maintenance=#{(500 * (excel('maintenance_coefficient') || 1)).round}
+%%def :wear_capacity_, [(0.3*cost_**2 - 1000*cost_), 5000000000].min
+wear_capacity=#{(wear_capacity_ * (excel('wear_coefficient') || 1).round)}
+
+---

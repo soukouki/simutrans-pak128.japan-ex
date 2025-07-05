@@ -957,11 +957,11 @@ signals_on_left = 1
 # city_road[0]=name,1900,1920
 # city_road[1]=name2,1920,1950
 
-city_road[0]=dirt_road,1700,1780
-city_road[1]=cobblestone_road,1780,1910
-city_road[2]=tarmac_city_road,1910,1933
-city_road[3]=city_road,1933,1996
-city_road[4]=city_road-sma,1997,2200
+city_road[0]=iss_wrg_0050,1700,1780
+city_road[1]=iss_wrg_0050,1780,1910
+city_road[2]=iss_wrg_0050,1910,1933
+city_road[3]=iss_wrg_0050,1933,1996
+city_road[4]=iss_wrg_0050,1997,2200
 
 # Intercity roads timeline. Format examples: 
 # intercity_road[0]=name,1900,1920
