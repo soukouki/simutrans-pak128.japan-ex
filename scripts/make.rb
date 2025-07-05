@@ -29,10 +29,12 @@ PAK_DIRS = {
     misc
     roadsign
     building
+    way-object/track/128jp
   ],
   256 => %w[
-    way/iss
     pier/iss
+    way/iss
+    way-object/track/iss
   ],
 }
 
