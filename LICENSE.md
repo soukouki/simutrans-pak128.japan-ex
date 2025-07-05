@@ -19,7 +19,7 @@ Unless otherwise noted, the files created by the Pak128.Japan-Ex+Addons team are
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`building/128britain-ex`, `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `way/128britain-ex`以下のPNGファイルとdattファイルと、`config`以下のtabファイルは、[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)を元に改造したものです。これらのファイルは Artistic License に基づいて配布されています。詳細なライセンス条項については、[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)をご参照ください。
+`building/depot/128britain-ex`, `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `way/128britain-ex`以下のPNGファイルとdattファイルと、`config`以下のtabファイルは、[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)を元に改造したものです。これらのファイルは Artistic License に基づいて配布されています。詳細なライセンス条項については、[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)をご参照ください。
 
 The PNG files and datt files under `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, and `way/128britain-ex`, as well as the tab files under `config`, have been modified based on [Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain). These files are distributed under the Artistic License. For detailed licensing terms, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt).
 
@@ -67,7 +67,7 @@ Based on the above permissions, we will use wa-st's original work under the orig
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`ground/gobanboshi`以下のPNGファイルとdattファイルは、五番星氏の[俺得!日本伝統色地表セット](http://gobanboshi.s25.xrea.com/simutrans/main.html)に改造を加えたものです。
+`building/townhall/gobanboshi`, `ground/gobanboshi`以下のPNGファイルとdattファイルは、五番星氏の[俺得!日本伝統色地表セット](http://gobanboshi.s25.xrea.com/simutrans/main.html)に改造を加えたものです。
 
 The PNG files and datt files located under `ground/gobanboshi` are modified versions of Gobanboshi's [My Personal Japanese Traditional Color Ground Set](http://gobanboshi.s25.xrea.com/simutrans/main.html).
 

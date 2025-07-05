@@ -1,4 +1,4 @@
-%require '../../depot.datt'
+%require '../depot.datt'
 ---
 Name=ModernTramDepot
 %include 'depot'
