@@ -1,0 +1,13 @@
+%require '../citycar.datt'
+---
+name=FSS_LEVORG_VMG
+copyright=AoharaMaika
+%include 'citycar'
+Image[S]=LEVORG_VM_L.0.0
+Image[N]=LEVORG_VM_L.0.1
+Image[E]=LEVORG_VM_L.0.2
+Image[W]=LEVORG_VM_L.0.3
+Image[SE]=LEVORG_VM_L.0.4
+Image[NW]=LEVORG_VM_L.0.5
+Image[NE]=LEVORG_VM_L.0.6
+Image[SW]=LEVORG_VM_L.0.7
