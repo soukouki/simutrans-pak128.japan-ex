@@ -1,0 +1,13 @@
+%require '../citycar.datt'
+---
+name=FSS_jzx100_mark2
+copyright=AoharaMaika
+%include 'citycar'
+Image[S]=mark2.0.0
+Image[N]=mark2.0.1
+Image[E]=mark2.0.2
+Image[W]=mark2.0.3
+Image[SE]=mark2.0.4
+Image[NW]=mark2.0.5
+Image[NE]=mark2.0.6
+Image[SW]=mark2.0.7

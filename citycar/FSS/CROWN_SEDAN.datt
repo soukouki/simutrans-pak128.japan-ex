@@ -1,0 +1,13 @@
+%require '../citycar.datt'
+---
+name=FSS_crown_sedan_XS10_K
+copyright=AoharaMaika
+%include 'citycar'
+Image[S]=crown_comfort.0.0
+Image[N]=crown_comfort.0.1
+Image[E]=crown_comfort.0.2
+Image[W]=crown_comfort.0.3
+Image[SE]=crown_comfort.0.4
+Image[NW]=crown_comfort.0.5
+Image[NE]=crown_comfort.0.6
+Image[SW]=crown_comfort.0.7
