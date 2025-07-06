@@ -1,15 +1,15 @@
 
-# LICENSE ãƒ©ã‚¤ã‚»ãƒ³ã‚¹
+# LICENSE ƒ‰ƒCƒZƒ“ƒX
 
-ã“ã®ãƒªãƒã‚¸ãƒˆãƒªã¯è¤‡æ•°ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã®ä¸‹ã§æä¾›ã•ã‚Œã¦ã„ã‚‹ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¨ãƒã‚¤ãƒŠãƒªã‚’å«ã¿ã¾ã™ã€‚å„ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ã”ã¨ã«ç•°ãªã‚‹ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚
+‚±‚ÌƒŠƒ|ƒWƒgƒŠ‚Í•¡”‚Ìƒ‰ƒCƒZƒ“ƒX‚Ì‰º‚Å’ñ‹Ÿ‚³‚ê‚Ä‚¢‚éƒ\[ƒXƒR[ƒh‚ÆƒoƒCƒiƒŠ‚ğŠÜ‚İ‚Ü‚·BŠeƒfƒBƒŒƒNƒgƒŠEƒtƒ@ƒCƒ‹‚²‚Æ‚ÉˆÙ‚È‚éƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚Ü‚·B
 
 This repository contains source code and binaries licensed under multiple licenses. Different licenses apply to each directory and file.
 
-ä»¥ä¸‹ã«è¨˜è¼‰ãŒãªã„å ´åˆã¯Pak128.Japan-Ex+Addonsãƒãƒ¼ãƒ ãŒåˆ¶ä½œã—ãŸãƒ•ã‚¡ã‚¤ãƒ«ã§ã™ã€‚ã“ã‚Œã‚‰ã¯ [ã‚¯ãƒªã‚¨ã‚¤ãƒ†ã‚£ãƒ–ãƒ»ã‚³ãƒ¢ãƒ³ã‚º è¡¨ç¤º 4.0 å›½éš› (CC BY 4.0) ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã®ä¸‹ã§æä¾›ã•ã‚Œã¾ã™ã€‚
+ˆÈ‰º‚É‹LÚ‚ª‚È‚¢ê‡‚ÍPak128.Japan-Ex+Addonsƒ`[ƒ€‚ª§ì‚µ‚½ƒtƒ@ƒCƒ‹‚Å‚·B‚±‚ê‚ç‚Í [ƒNƒŠƒGƒCƒeƒBƒuEƒRƒ‚ƒ“ƒY •\¦ 4.0 ‘Û (CC BY 4.0) ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Ì‰º‚Å’ñ‹Ÿ‚³‚ê‚Ü‚·B
 
 Unless otherwise noted, the files created by the Pak128.Japan-Ex+Addons team are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/).
 
-(è¿½è¨˜ã™ã‚‹æ–¹ã¸: ä»¥ä¸‹æ•°å­—ã€ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆé †)
+(’Ç‹L‚·‚é•û‚Ö: ˆÈ‰º”šAƒAƒ‹ƒtƒ@ƒxƒbƒg‡)
 
 ## 128britain-ex, config
 
@@ -19,11 +19,11 @@ Unless otherwise noted, the files created by the Pak128.Japan-Ex+Addons team are
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`building/depot/128britain-ex`, `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `way/128britain-ex`ä»¥ä¸‹ã®PNGãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¨ã€`config`ä»¥ä¸‹ã®tabãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)ã‚’å…ƒã«æ”¹é€ ã—ãŸã‚‚ã®ã§ã™ã€‚ã“ã‚Œã‚‰ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯ Artistic License ã«åŸºã¥ã„ã¦é…å¸ƒã•ã‚Œã¦ã„ã¾ã™ã€‚è©³ç´°ãªãƒ©ã‚¤ã‚»ãƒ³ã‚¹æ¡é …ã«ã¤ã„ã¦ã¯ã€[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
+`building/depot/128britain-ex`, `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, `way/128britain-ex`ˆÈ‰º‚ÌPNGƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÆA`config`ˆÈ‰º‚Ìtabƒtƒ@ƒCƒ‹‚ÍA[Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain)‚ğŒ³‚É‰ü‘¢‚µ‚½‚à‚Ì‚Å‚·B‚±‚ê‚ç‚Ìƒtƒ@ƒCƒ‹‚Í Artistic License ‚ÉŠî‚Ã‚¢‚Ä”z•z‚³‚ê‚Ä‚¢‚Ü‚·BÚ×‚Èƒ‰ƒCƒZƒ“ƒXğ€‚É‚Â‚¢‚Ä‚ÍA[LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt)‚ğ‚²QÆ‚­‚¾‚³‚¢B
 
 The PNG files and datt files under `cursor/128britain-ex`, `ground/128britain-ex`, `menu/128britain-ex`, `misc/128britain-ex`, `symbol/128britain-ex`, and `way/128britain-ex`, as well as the tab files under `config`, have been modified based on [Pak128.Britain-Ex](https://github.com/jamespetts/simutrans-pak128.britain). These files are distributed under the Artistic License. For detailed licensing terms, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-pak128.britain/blob/22bdd2e/licence.txt).
 
-Pak128.Britain-Exãƒãƒ¼ãƒ ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+Pak128.Britain-Exƒ`[ƒ€‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Under the above permissions, we will use the original work created by the Pak128.Britain-Ex team under the original author's terms, while only providing the modified portions under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/deed.ja). Please comply with both sets of terms when using this work.
 
@@ -34,16 +34,16 @@ Under the above permissions, we will use the original work created by the Pak128
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`building/stop-track/128japan`, `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, `way-object/track/128japan`ä»¥ä¸‹ã®pngãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)ã‚’å…ƒã«æ”¹é€ ã—ãŸã‚‚ã®ã§ã™ã€‚
+`building/stop-track/128japan`, `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, `way-object/track/128japan`ˆÈ‰º‚Ìpngƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÍA[PAK128.Japan](http://pak128.jpn.org/index.htm.ja)‚ğŒ³‚É‰ü‘¢‚µ‚½‚à‚Ì‚Å‚·B
 
 The PNG files and datt files listed below under `building/stop-track/128japan`, `cursor/128japan`, `ground/128japan`, `misc/128japan`, `symbol/128japan`, and `way-object/track/128japan` have been modified based on [PAK128.Japan](http://pak128.jpn.org/index.htm.ja).
 
-> è‡ªåˆ†ãŒä½œã£ãŸã‚‚ã®ã«ã¤ã„ã¦ã¯è‡ªç”±ã«ä½¿ã£ã¦ã„ãŸã ã„ã¦æ§‹ã„ã¾ã›ã‚“ã€‚  
-> æ´¾ç”Ÿç‰ˆã‚’ä½œã£ã¦ã„ãŸã ã„ã¦æ§‹ã„ã¾ã›ã‚“ã—ã€ãã‚Œã‚’å…¬é–‹ã™ã‚‹ã®ã‚‚è‡ªç”±ã§ã™ã€‚
+> ©•ª‚ªì‚Á‚½‚à‚Ì‚É‚Â‚¢‚Ä‚Í©—R‚Ég‚Á‚Ä‚¢‚½‚¾‚¢‚Ä\‚¢‚Ü‚¹‚ñB  
+> ”h¶”Å‚ğì‚Á‚Ä‚¢‚½‚¾‚¢‚Ä\‚¢‚Ü‚¹‚ñ‚µA‚»‚ê‚ğŒöŠJ‚·‚é‚Ì‚à©—R‚Å‚·B
 >
 > https://forum.japanese.simutrans.com/index.php?topic=98.msg3233#msg3233
 
-ç§é”ã¯ä¸Šè¨˜ã®è¨±è«¾ã«åŸºã¥ãã€yoshiæ°ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+„’B‚Íã‹L‚Ì‹–‘ø‚ÉŠî‚Ã‚«Ayoshi‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Under the above permissions, we will use yoshi's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/deed.ja). Users must comply with both sets of terms.
 
@@ -54,30 +54,30 @@ Under the above permissions, we will use yoshi's original work under the origina
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`scripts/datt.rb`ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€[pak.nippon](https://github.com/wa-st/pak-nippon)ã‚’å…ƒã«æ”¹é€ ã—ãŸã‚‚ã®ã§ã™ã€‚å…ƒä½œå“ã¯MITãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«åŸºã¥ã„ã¦é…å¸ƒã•ã‚Œã¦ã„ã¾ã™ã€‚è©³ç´°ãªãƒ©ã‚¤ã‚»ãƒ³ã‚¹æ¡é …ã«ã¤ã„ã¦ã¯ã€[README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
+`scripts/datt.rb`ƒtƒ@ƒCƒ‹‚ÍA[pak.nippon](https://github.com/wa-st/pak-nippon)‚ğŒ³‚É‰ü‘¢‚µ‚½‚à‚Ì‚Å‚·BŒ³ì•i‚ÍMITƒ‰ƒCƒZƒ“ƒX‚ÉŠî‚Ã‚¢‚Ä”z•z‚³‚ê‚Ä‚¢‚Ü‚·BÚ×‚Èƒ‰ƒCƒZƒ“ƒXğ€‚É‚Â‚¢‚Ä‚ÍA[README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md)‚ğ‚²QÆ‚­‚¾‚³‚¢B
 
 The `scripts/datt.rb` file is a modified version of [pak.nippon](https://github.com/wa-st/pak-nippon). The original work is distributed under the MIT License. For detailed licensing terms, please refer to the [README.md](https://github.com/wa-st/pak-nippon/blob/bb6c6f7/README.md) file.
 
-wa-stæ°ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+wa-st‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Based on the above permissions, we will use wa-st's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/deed.ja). Users must comply with both sets of terms.
 
 ## gobanboshi
 
 - Original work
-  - äº”ç•ªæ˜Ÿ(Gobanboshi)
+  - ŒÜ”Ô¯(Gobanboshi)
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`building/townhall/gobanboshi`, `ground/gobanboshi`ä»¥ä¸‹ã®PNGãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€äº”ç•ªæ˜Ÿæ°ã®[ä¿ºå¾—!æ—¥æœ¬ä¼çµ±è‰²åœ°è¡¨ã‚»ãƒƒãƒˆ](http://gobanboshi.s25.xrea.com/simutrans/main.html)ã«æ”¹é€ ã‚’åŠ ãˆãŸã‚‚ã®ã§ã™ã€‚
+`building/townhall/gobanboshi`, `ground/gobanboshi`ˆÈ‰º‚ÌPNGƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÍAŒÜ”Ô¯‚Ì[‰´“¾!“ú–{“`“F’n•\ƒZƒbƒg](http://gobanboshi.s25.xrea.com/simutrans/main.html)‚É‰ü‘¢‚ğ‰Á‚¦‚½‚à‚Ì‚Å‚·B
 
 The PNG files and datt files located under `ground/gobanboshi` are modified versions of Gobanboshi's [My Personal Japanese Traditional Color Ground Set](http://gobanboshi.s25.xrea.com/simutrans/main.html).
 
-> é…å¸ƒç‰©ã®ãªã‹ã«ã¯ã‚½ãƒ¼ã‚¹(png,datç­‰)ã‚’å…¬é–‹ã—ã¦ã„ã‚‹ã‚‚ã®ãŒã‚ã‚Šã¾ã™ãŒã€æ”¹é€ ã«ã¤ãã¾ã—ã¦ã¯ã€ç§ãŒæ‰‹ãŒã‘ãŸéƒ¨åˆ†ã«é™ã‚Šã€ç‰¹ã«åˆ¶é™ã‚’è¨­ã‘ã‚‹ã“ã¨ã¯ã”ã–ã„ã¾ã›ã‚“ã€‚ã”è‡ªç”±ã«ãŠé¡˜ã„ã„ãŸã—ã¾ã™ã€‚
+> ”z•z•¨‚Ì‚È‚©‚É‚Íƒ\[ƒX(png,dat“™)‚ğŒöŠJ‚µ‚Ä‚¢‚é‚à‚Ì‚ª‚ ‚è‚Ü‚·‚ªA‰ü‘¢‚É‚Â‚«‚Ü‚µ‚Ä‚ÍA„‚ªè‚ª‚¯‚½•”•ª‚ÉŒÀ‚èA“Á‚É§ŒÀ‚ğİ‚¯‚é‚±‚Æ‚Í‚²‚´‚¢‚Ü‚¹‚ñB‚²©—R‚É‚¨Šè‚¢‚¢‚½‚µ‚Ü‚·B
 >
 > http://gobanboshi.s25.xrea.com/simutrans/main.html
 
-ç§é”ã¯ä¸Šè¨˜ã®è¨±è«¾ã«åŸºã¥ãã€äº”ç•ªæ˜Ÿæ°ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+„’B‚Íã‹L‚Ì‹–‘ø‚ÉŠî‚Ã‚«AŒÜ”Ô¯‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Based on the above permission, we use Gobanboshi's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
 
@@ -88,66 +88,66 @@ Based on the above permission, we use Gobanboshi's original work under the origi
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`pier/iss`, `way/iss`, `way-object/track/iss`ä»¥ä¸‹ã®PNGãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€128naæ°ã®[ãã‚Œãªã‚Šã«ãã‚Œã£ã½ã„ã‚¤ãƒ³ãƒ•ãƒ©ã‚¢ãƒ‰ã‚ªãƒ³é›†](https://128na.github.io/iss/)ã‚’å…ƒã«æ”¹é€ ã‚’åŠ ãˆãŸã‚‚ã®ã§ã™ã€‚
+`pier/iss`, `way/iss`, `way-object/track/iss`ˆÈ‰º‚ÌPNGƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÍA128na‚Ì[‚»‚ê‚È‚è‚É‚»‚ê‚Á‚Û‚¢ƒCƒ“ƒtƒ‰ƒAƒhƒIƒ“W](https://128na.github.io/iss/)‚ğŒ³‚É‰ü‘¢‚ğ‰Á‚¦‚½‚à‚Ì‚Å‚·B
 
 The PNG files and datt files under `pier/iss`, `way/iss`, and `way-object/track/iss` are based on [this reasonably convincing infrastructure add-on collection](https://128na.github.io/iss/) by user 128na, with modifications made to the original files.
 
-å…ƒä½œå“ã¯[ã‚¯ãƒªã‚¨ã‚¤ãƒ†ã‚£ãƒ–ãƒ»ã‚³ãƒ¢ãƒ³ã‚º è¡¨ç¤º 4.0 å›½éš› ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](http://creativecommons.org/licenses/by/4.0/)ã®å…ƒã§é…å¸ƒã•ã‚Œã¦ã„ã¾ã™ã€‚æ”¹é€ éƒ¨åˆ†ã«ã¤ã„ã¦ã¯ã€[CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+Œ³ì•i‚Í[ƒNƒŠƒGƒCƒeƒBƒuEƒRƒ‚ƒ“ƒY •\¦ 4.0 ‘Û ƒ‰ƒCƒZƒ“ƒX](http://creativecommons.org/licenses/by/4.0/)‚ÌŒ³‚Å”z•z‚³‚ê‚Ä‚¢‚Ü‚·B‰ü‘¢•”•ª‚É‚Â‚¢‚Ä‚ÍA[CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Original work is distributed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The modified portions are provided under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.ja). Users must comply with both sets of terms.
 
 ## kururi
 
 - Original work
-  - ä¹…ç•™é‡Œ(kururi)
+  - ‹v—¯—¢(kururi)
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`menu/kururi`ä»¥ä¸‹ã®PNGãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€ä¹…ç•™é‡Œæ°ã®[ã¼ãã®ã‹ã‚“ãŒãˆãŸã•ã„ãã‚‡ã†ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚¢ã‚¤ã‚³ãƒ³](https://wikiwiki.jp/twitrans/addon/recycle)ã«æ”¹é€ ã‚’åŠ ãˆãŸã‚‚ã®ã§ã™ã€‚
+`menu/kururi`ˆÈ‰º‚ÌPNGƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÍA‹v—¯—¢‚Ì[‚Ú‚­‚Ì‚©‚ñ‚ª‚¦‚½‚³‚¢‚«‚å‚¤‚Ìƒƒjƒ…[ƒAƒCƒRƒ“](https://wikiwiki.jp/twitrans/addon/recycle)‚É‰ü‘¢‚ğ‰Á‚¦‚½‚à‚Ì‚Å‚·B
 
 The PNG files and datt files located under `menu/kururi` are modified versions of Kururi's [My Concept of the Ultimate Menu Icons](https://wikiwiki.jp/twitrans/addon/recycle).
 
-> å…¨ã¦ã®æ¨©åˆ©ã‚’ç ´æ£„ã—ã¦ã„ã¾ã™ã€‚ã€Œreadmeã€ãƒ•ã‚¡ã‚¤ãƒ«ã«è¨˜è¼‰ã•ã‚ŒãŸæ¨©åˆ©é–¢ä¿‚ã®å†…å®¹ã¯ã€å…¨ã¦ç„¡è¦–ã—ã¦ãã ã•ã„ã€‚
+> ‘S‚Ä‚ÌŒ —˜‚ğ”jŠü‚µ‚Ä‚¢‚Ü‚·Bureadmevƒtƒ@ƒCƒ‹‚É‹LÚ‚³‚ê‚½Œ —˜ŠÖŒW‚Ì“à—e‚ÍA‘S‚Ä–³‹‚µ‚Ä‚­‚¾‚³‚¢B
 >
 > https://wikiwiki.jp/twitrans/addon/recycle
 
-ç§é”ã¯ä¸Šè¨˜ã®è¨±è«¾ã«åŸºã¥ãã€ä¹…ç•™é‡Œæ°ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+„’B‚Íã‹L‚Ì‹–‘ø‚ÉŠî‚Ã‚«A‹v—¯—¢‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Based on the above permission, we use Kururi's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
 
 ## ooboke
 
 - Original work
-  - å¤§ã¼ã‘(ooboke)
+  - ‘å‚Ú‚¯(ooboke)
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`roadsign/ooboke`ä»¥ä¸‹ã®PNGãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€å¤§ã¼ã‘æ°ã®[é‰„é“ç”¨ä¿¡å·æ©Ÿ](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool)ã«æ”¹é€ ã‚’åŠ ãˆãŸã‚‚ã®ã§ã™ã€‚
+`roadsign/ooboke`ˆÈ‰º‚ÌPNGƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÍA‘å‚Ú‚¯‚Ì[“S“¹—pM†‹@](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool)‚É‰ü‘¢‚ğ‰Á‚¦‚½‚à‚Ì‚Å‚·B
 
 The PNG files and datt files located under `roadsign/ooboke` are modified versions of Ooboke's [Railway signal](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool).
 
-> ã€æ”¹é€ ãã®ä»–ã«ã¤ã„ã¦ã€‘
-> æ”¹é€ åŠã³ãã®å…¬é–‹ç­‰ã¯ã”è‡ªç”±ã«ã©ã†ãã€‚
+> y‰ü‘¢‚»‚Ì‘¼‚É‚Â‚¢‚Äz
+> ‰ü‘¢‹y‚Ñ‚»‚ÌŒöŠJ“™‚Í‚²©—R‚É‚Ç‚¤‚¼B
 
-ç§é”ã¯ä¸Šè¨˜ã®è¨±è«¾ã«åŸºã¥ãã€å¤§ã¼ã‘æ°ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+„’B‚Íã‹L‚Ì‹–‘ø‚ÉŠî‚Ã‚«A‘å‚Ú‚¯‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Based on the above permission, we use Ooboke's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
 
 ## kannami
 
 - Original work
-  - å‡½å— (kannami)
+  - ”Ÿ“ì (kannami)
 - Modifications
   - The Pak128.Japan-Ex+Addons Team
 
-`roadsign/kannami`ä»¥ä¸‹ã®PNGãƒ•ã‚¡ã‚¤ãƒ«ã¨dattãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€å‡½å—æ°ã®[ATCæ¨™è­˜å‹ä¿¡å·æ©Ÿ](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool)ã«æ”¹é€ ã‚’åŠ ãˆãŸã‚‚ã®ã§ã™ã€‚
+`roadsign/kannami`ˆÈ‰º‚ÌPNGƒtƒ@ƒCƒ‹‚Ædattƒtƒ@ƒCƒ‹‚ÍA”Ÿ“ì‚Ì[ATC•W¯Œ^M†‹@](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool)‚É‰ü‘¢‚ğ‰Á‚¦‚½‚à‚Ì‚Å‚·B
 
 The PNG files and datt files located under `roadsign/kannami` are modified versions of Ooboke's [ATC Railroad signs](https://japanese.simutrans.com/index.php?Addon128Japan/TransportTools#Railtool).
 
-> è‡ªç”±ã«æ”¹é€ ã€å†é…å¸ƒã€æ”¹é€ å†é…å¸ƒå¯èƒ½ã§ã™ã€‚
-> åŸä½œè€…ã®åå‰ã¯è¨˜è¼‰ã—ã¦ä¸‹ã•ã„ã€‚
+> ©—R‚É‰ü‘¢AÄ”z•zA‰ü‘¢Ä”z•z‰Â”\‚Å‚·B
+> Œ´ìÒ‚Ì–¼‘O‚Í‹LÚ‚µ‚Ä‰º‚³‚¢B
 
-ç§é”ã¯ä¸Šè¨˜ã®è¨±è«¾ã«åŸºã¥ãã€å‡½å—æ°ãŒä½œæˆã—ãŸå…ƒä½œå“ã‚’å…ƒä½œè€…ã®æ¡ä»¶ã®ã‚‚ã¨ã§åˆ©ç”¨ã—ã€æ”¹é€ éƒ¨åˆ†ã®ã¿ã‚’ [CC BY 4.0 ãƒ©ã‚¤ã‚»ãƒ³ã‚¹](https://creativecommons.org/licenses/by/4.0/deed.ja)ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨æ™‚ã¯ä¸¡æ–¹ã®æ¡ä»¶ã‚’éµå®ˆã—ã¦ãã ã•ã„ã€‚
+„’B‚Íã‹L‚Ì‹–‘ø‚ÉŠî‚Ã‚«A”Ÿ“ì‚ªì¬‚µ‚½Œ³ì•i‚ğŒ³ìÒ‚ÌğŒ‚Ì‚à‚Æ‚Å—˜—p‚µA‰ü‘¢•”•ª‚Ì‚İ‚ğ [CC BY 4.0 ƒ‰ƒCƒZƒ“ƒX](https://creativecommons.org/licenses/by/4.0/deed.ja)‚Å’ñ‹Ÿ‚µ‚Ü‚·B—˜—p‚Í—¼•û‚ÌğŒ‚ğ…ç‚µ‚Ä‚­‚¾‚³‚¢B
 
 Based on the above permission, we use Kannami's original work under the original author's terms, and provide only our modifications under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Users must comply with both sets of terms.
 
@@ -158,7 +158,7 @@ Based on the above permission, we use Kannami's original work under the original
   - The Simutrans Team (since 2005)
   - The Simutrans-Extended Team (since 2009)
 
-`makeobj` ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«å«ã¾ã‚Œã‚‹å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€[Simutrans-Extended](https://github.com/jamespetts/simutrans-extended)ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’æ”¹å¤‰ã›ãšã«ãƒ“ãƒ«ãƒ‰ã—ãŸã‚‚ã®ã§ã™ã€‚æœ¬å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã¯ Artistic License ã«å¾“ã£ã¦é…å¸ƒã•ã‚Œã¾ã™ã€‚è©³ç´°ãªãƒ©ã‚¤ã‚»ãƒ³ã‚¹æ¡é …ã«ã¤ã„ã¦ã¯ã€[LICENSE.txt](https://github.com/jamespetts/simutrans-extended/blob/4dab37b/LICENSE.txt)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
+`makeobj` ƒfƒBƒŒƒNƒgƒŠ‚ÉŠÜ‚Ü‚ê‚éÀsƒtƒ@ƒCƒ‹‚ÍA[Simutrans-Extended](https://github.com/jamespetts/simutrans-extended)‚Ìƒ\[ƒXƒR[ƒh‚ğ‰ü•Ï‚¹‚¸‚Éƒrƒ‹ƒh‚µ‚½‚à‚Ì‚Å‚·B–{Àsƒtƒ@ƒCƒ‹‚Í Artistic License ‚É]‚Á‚Ä”z•z‚³‚ê‚Ü‚·BÚ×‚Èƒ‰ƒCƒZƒ“ƒXğ€‚É‚Â‚¢‚Ä‚ÍA[LICENSE.txt](https://github.com/jamespetts/simutrans-extended/blob/4dab37b/LICENSE.txt)‚ğ‚²QÆ‚­‚¾‚³‚¢B
 
 The executable files found in the `makeobj` directory are built from the [Simutrans-Extended](https://github.com/jamespetts/simutrans-extended) source code without modification. This executable is distributed under the terms of the Artistic License. For the full license text, please refer to [LICENSE.txt](https://github.com/jamespetts/simutrans-extended/blob/4dab37b/LICENSE.txt).
 

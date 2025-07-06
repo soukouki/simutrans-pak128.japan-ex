@@ -1,7 +1,7 @@
 %require '../../rail.datt'
 %require_excel '../../rail.xlsx'
 ---
-# @text ja:[åœ°ä¸Š] ä½é€Ÿãƒˆãƒ©ãƒ è»Œé“
+# @text ja:[’nã] ’á‘¬ƒgƒ‰ƒ€‹O“¹
 # @text en:[Ground] Low speed tram track
 name=iss_wsg_0040
 copyright=128na
@@ -47,7 +47,7 @@ image[nsw2][0]=standard_kt.5.7,-64,-32
 image[sew2][0]=standard_kt.5.8,-64,-32
 image[nsew2][0]=standard_kt.5.9,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] é«˜é€Ÿãƒˆãƒ©ãƒ è»Œé“
+# @text ja:[’nã] ‚‘¬ƒgƒ‰ƒ€‹O“¹
 # @text en:[Ground] High speed tram track
 name=iss_wsg_0080
 copyright=128na

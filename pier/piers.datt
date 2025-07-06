@@ -1,7 +1,7 @@
 ---
 
 %resource 'pier'
-%%addon excel!('addon') == 'Âê´'
+%%addon excel!('addon') == 'ä‹'
 %%ja excel('japanese')
 %%en excel('english')
 intro_year=#{excel('intro_year')}
@@ -12,9 +12,9 @@ maintenance=1000
 topspeed=#{excel('topspeed')}
 max_weight=#{excel('max_weight')}
 
-above_way_ribi=#{(excel('aboveribi').include?("Âåó")?1:0)+(excel('aboveribi').include?("Êù±")?2:0)+(excel('aboveribi').include?("Âçó")?4:0)+(excel('aboveribi').include?("Ë•ø")?8:0)}
-below_way_ribi=#{(excel('belowribi').include?("Âåó")?1:0)+(excel('belowribi').include?("Êù±")?2:0)+(excel('belowribi').include?("Âçó")?4:0)+(excel('belowribi').include?("Ë•ø")?8:0)}
-drag_ribi=#{(excel('dragribi').include?("Âåó")?1:0)+(excel('dragribi').include?("Êù±")?2:0)+(excel('dragribi').include?("Âçó")?4:0)+(excel('dragribi').include?("Ë•ø")?8:0)}
+above_way_ribi=#{(excel('aboveribi').include?("ñk")?1:0)+(excel('aboveribi').include?("ìå")?2:0)+(excel('aboveribi').include?("ìÏ")?4:0)+(excel('aboveribi').include?("êº")?8:0)}
+below_way_ribi=#{(excel('belowribi').include?("ñk")?1:0)+(excel('belowribi').include?("ìå")?2:0)+(excel('belowribi').include?("ìÏ")?4:0)+(excel('belowribi').include?("êº")?8:0)}
+drag_ribi=#{(excel('dragribi').include?("ñk")?1:0)+(excel('dragribi').include?("ìå")?2:0)+(excel('dragribi').include?("ìÏ")?4:0)+(excel('dragribi').include?("êº")?8:0)}
 auto_group=#{excel('auto_group')}
 auto_height=#{excel('auto_height')}
 base_mask=#{excel('base_mask')}

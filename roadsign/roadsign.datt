@@ -9,9 +9,9 @@ copyright=#{excel('copyright')}
 waytype=#{excel('waytype')}
 intro_year=#{excel('intro_year')}
 intro_month=#{excel('intro_month') || 1}
-is_signal=#{((excel('signaltype')=='菫｡蜿ｷ' or excel('signaltype')=='蝣ｴ蜀�菫｡蜿ｷ') or excel('signaltype')=='菫｡蜿ｷ+驕譁ｹ菫｡蜿ｷ') ? 1 : 0}
-is_presignal=#{excel('signaltype')=='驕譁ｹ菫｡蜿ｷ' ? 1 : 0}
-free_route=#{excel('signaltype')=='蝣ｴ蜀�菫｡蜿ｷ' ? 1 : 0}
+is_signal=#{((excel('signaltype')=='信号' or excel('signaltype')=='場内信号') or excel('signaltype')=='信号+遠方信号') ? 1 : 0}
+is_presignal=#{excel('signaltype')=='遠方信号' ? 1 : 0}
+free_route=#{excel('signaltype')=='場内信号' ? 1 : 0}
 max_distance_to_signalbox=#{excel('max_distance_to_signalbox')}
 has_selective_choose=#{excel('has_selective_choose')}
 working_method=#{set_WM(excel('working_method'))}

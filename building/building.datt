@@ -1,14 +1,14 @@
 ---
 
-# buildingç”¨ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
-# ç›´æ¥includeã™ã‚‹ã®ã§ã¯ãªãã€ä¸€æ—¦depotã‚„headquarterãªã©ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã«includeã™ã‚‹ã‚ˆã†ã«ã—ã¦æ‰±ã†
+# building—p‚Ìƒeƒ“ƒvƒŒ[ƒg
+# ’¼Úinclude‚·‚é‚Ì‚Å‚Í‚È‚­Aˆê’Udepot‚âheadquarter‚È‚Ç‚Ìƒeƒ“ƒvƒŒ[ƒg‚Éinclude‚·‚é‚æ‚¤‚É‚µ‚Äˆµ‚¤
 
 %resource 'building'
 
 %require_ruby 'class.rb'
 
 obj=building
-%%%addon excel!('addon') == 'å«'
+%%%addon excel!('addon') == 'ŠÜ'
 %%%ja excel!('japanese')
 %%%en excel!('english')
 
@@ -18,18 +18,18 @@ intro_month=#{excel('intro_month') || 1}
 retire_year=#{excel('retire_year') || 9999}
 retire_month=#{excel('retire_month') || 1}
 
-# typeã«é–¢ã—ã¦ã¯ã€å„dattãƒ•ã‚¡ã‚¤ãƒ«ã§è¨­å®šã™ã‚‹
+# type‚ÉŠÖ‚µ‚Ä‚ÍAŠedattƒtƒ@ƒCƒ‹‚Åİ’è‚·‚é
 
 level=#{excel('level') || 1}
 
-# tourist_base_trendã¯æœ€é«˜ã€é«˜ã€ä¸­ã€ä½ã€æœ€ä½ã®5æ®µéšã§è¨­å®šã™ã‚‹ã€‚
-# ãã‚Œãã‚Œã€è³‡ç”£å®¶ã€é«˜æ‰€å¾—è€…ã€ä¸­æµéšç´šã€åŠ´åƒè€…ã€ä½æ‰€å¾—è€…ã«å¯¾å¿œã™ã‚‹ã€‚
-# 1870å¹´ã‹ã‚‰2020å¹´ã¾ã§ã®150å¹´é–“ã§ã€meanã‚’1ä¸Šã’ã‚‹ã‚ˆã†ã«è£œæ­£ã™ã‚‹ã€‚1870å¹´ã‚ˆã‚Šå‰ã®è£œæ­£ã¯0ã€2020å¹´ä»¥é™ã®è£œæ­£ã¯1ã«ã™ã‚‹ã€‚
-# ãã“ã‹ã‚‰æ¨™æº–åå·®(Ïƒ)ã®æ­£è¦åˆ†å¸ƒã«å¾“ã£ã¦ã‚¯ãƒ©ã‚¹åˆ¥æ¯”ç‡ã‚’è¨­å®šã™ã‚‹ã€‚
+# tourist_base_trend‚ÍÅ‚A‚A’†A’áAÅ’á‚Ì5’iŠK‚Åİ’è‚·‚éB
+# ‚»‚ê‚¼‚êA‘Y‰ÆA‚Š“¾ÒA’†—¬ŠK‹‰A˜J“­ÒA’áŠ“¾Ò‚É‘Î‰‚·‚éB
+# 1870”N‚©‚ç2020”N‚Ü‚Å‚Ì150”NŠÔ‚ÅAmean‚ğ1ã‚°‚é‚æ‚¤‚É•â³‚·‚éB1870”N‚æ‚è‘O‚Ì•â³‚Í0A2020”NˆÈ~‚Ì•â³‚Í1‚É‚·‚éB
+# ‚»‚±‚©‚ç•W€•Î·(ƒĞ)‚Ì³‹K•ª•z‚É]‚Á‚ÄƒNƒ‰ƒX•Ê”ä—¦‚ğİ’è‚·‚éB
 
-# å±…ä½è€…ãƒ»è¦³å…‰å®¢
+# ‹ZÒEŠÏŒõ‹q
 population_and_visitor_demand_capacity=#{excel('demand_capacity') || 10}
-%%%def :tourists_mean_base, {"æœ€ä½" => 0, "ä½" => 1, "ä¸­" => 2, "é«˜" => 3, "æœ€é«˜" => 4}[excel('tourists_base_trend') || 'ä½']
+%%%def :tourists_mean_base, {"Å’á" => 0, "’á" => 1, "’†" => 2, "‚" => 3, "Å‚" => 4}[excel('tourists_base_trend') || '’á']
 %%%def :tourists_mean_adjustment, ((intro_year_ - 1870) / 150.0).clamp(0, 1)
 %%%def :tourists_mean, tourists_mean_base + tourists_mean_adjustment
 %%%def :tourists_sigma, excel('tourists_sigma') || 1
@@ -43,9 +43,9 @@ class_proportion[3]=#{tourists[3]}
 class_proportion[4]=#{tourists[4]}
 class_proportion[5]=#{tourists[5]}
 
-# é€šå‹¤å®¢
+# ’Ê‹Î‹q
 employment_capacity=#{excel('employment_capacity') || 60}
-%%%def :commuters_mean, {"æœ€ä½" => 0, "ä½" => 1, "ä¸­" => 2, "é«˜" => 3, "æœ€é«˜" => 4}[excel('commuters_base_trend') || 'ä½']
+%%%def :commuters_mean, {"Å’á" => 0, "’á" => 1, "’†" => 2, "‚" => 3, "Å‚" => 4}[excel('commuters_base_trend') || '’á']
 %%%def :commuters_mean_adjustment, ((intro_year_ - 1870) / 150.0).clamp(0, 1)
 %%%def :commuters_mean, commuters_mean + commuters_mean_adjustment
 %%%def :commuters_sigma, excel('commuters_sigma') || 1
@@ -61,8 +61,8 @@ class_proportion_jobs[5]=#{commuters[5]}
 
 mail_demand=#{excel!('mail_demand') || 10}
 
-# TODO: under_pier_okã‚’è¨­å®šã™ã‚‹
+# TODO: under_pier_ok‚ğİ’è‚·‚é
 
-pier_sub_needed=#{excel('pier_sub_needed') == 'é«˜æ¶ä¸‹ã®ã¿' ? 1 : 0}
+pier_sub_needed=#{excel('pier_sub_needed') == '‚‰Ë‰º‚Ì‚İ' ? 1 : 0}
 
 ---

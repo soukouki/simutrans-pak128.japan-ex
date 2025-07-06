@@ -1,7 +1,7 @@
 %require '../../rail.datt'
 %require_excel '../../rail.xlsx'
 ---
-# @text ja:[åœ°ä¸Š] æœ¨ã¾ãã‚‰ãè»Œé“ï¼ˆå˜ï¼‰
+# @text ja:[’nã] –Ø‚Ü‚­‚ç‚¬‹O“¹i’Pj
 # @text en:[Ground] Wood tie track (single)
 name=iss_wtg_0120_single
 copyright=128na
@@ -47,7 +47,7 @@ image[nsw2][0]=standard_wood_g_single.5.7,-64,-32
 image[sew2][0]=standard_wood_g_single.5.8,-64,-32
 image[nsew2][0]=standard_wood_g_single.5.9,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] æœ¨ã¾ãã‚‰ãè»Œé“ï¼ˆå‰ï¼‰
+# @text ja:[’nã] –Ø‚Ü‚­‚ç‚¬‹O“¹i‘Oj
 # @text en:[Ground] Wood tie track (front)
 name=iss_wtg_0120_front
 copyright=128na
@@ -93,7 +93,7 @@ image[nsw2][0]=standard_wood_g_front.5.2,-64,-32
 image[sew2][0]=standard_wood_g_front.5.3,-64,-32
 image[nsew2][0]=standard_wood_g_front.5.4,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] æœ¨ã¾ãã‚‰ãè»Œé“ï¼ˆä¸­ï¼‰
+# @text ja:[’nã] –Ø‚Ü‚­‚ç‚¬‹O“¹i’†j
 # @text en:[Ground] Wood tie track (center)
 name=iss_wtg_0120_center
 copyright=128na
@@ -129,7 +129,7 @@ image[nsw][0]=standard_wood_g_center.3.2,-64,-32
 image[sew][0]=standard_wood_g_center.3.3,-64,-32
 image[nsew][0]=standard_wood_g_center.3.4,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] æœ¨ã¾ãã‚‰ãè»Œé“ï¼ˆå¾Œï¼‰
+# @text ja:[’nã] –Ø‚Ü‚­‚ç‚¬‹O“¹iŒãj
 # @text en:[Ground] Wood tie track (back)
 name=iss_wtg_0120_back
 copyright=128na

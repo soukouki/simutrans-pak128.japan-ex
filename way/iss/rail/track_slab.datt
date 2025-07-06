@@ -1,7 +1,7 @@
 %require '../../rail.datt'
 %require_excel '../../rail.xlsx'
 ---
-# @text ja:[鍦颁笂] 銈广儵銉栬粚閬擄紙鍗橈級
+# @text ja:[抧忋] 僗儔僽婳摴乮扨乯
 # @text en:[Ground] Slab track (single)
 name=iss_wtg_0360_slab_single
 copyright=128na
@@ -47,7 +47,7 @@ image[nsw2][0]=standard_slab_g_single.5.7,-64,-32
 image[sew2][0]=standard_slab_g_single.5.8,-64,-32
 image[nsew2][0]=standard_slab_g_single.5.9,-64,-32
 ---
-# @text ja:[鍦颁笂] 銈广儵銉栬粚閬擄紙鍓嶏級
+# @text ja:[抧忋] 僗儔僽婳摴乮慜乯
 # @text en:[Ground] Slab track (front)
 name=iss_wtg_0360_slab_front
 copyright=128na
@@ -93,7 +93,7 @@ image[nsw2][0]=standard_slab_g_front.5.2,-64,-32
 image[sew2][0]=standard_slab_g_front.5.3,-64,-32
 image[nsew2][0]=standard_slab_g_front.5.4,-64,-32
 ---
-# @text ja:[鍦颁笂] 銈广儵銉栬粚閬擄紙涓級
+# @text ja:[抧忋] 僗儔僽婳摴乮拞乯
 # @text en:[Ground] Slab track (center)
 name=iss_wtg_0360_slab_center
 copyright=128na
@@ -129,7 +129,7 @@ image[nsw][0]=standard_slab_g_center.3.2,-64,-32
 image[sew][0]=standard_slab_g_center.3.3,-64,-32
 image[nsew][0]=standard_slab_g_center.3.4,-64,-32
 ---
-# @text ja:[鍦颁笂] 銈广儵銉栬粚閬擄紙寰岋級
+# @text ja:[抧忋] 僗儔僽婳摴乮屻乯
 # @text en:[Ground] Slab track (back)
 name=iss_wtg_0360_slab_back
 copyright=128na

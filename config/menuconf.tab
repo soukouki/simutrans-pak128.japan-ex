@@ -78,7 +78,7 @@ general_tool[7]=6,6,,b
 general_tool[8]=7,7,11,g
 general_tool[9]=8,8,11,C
 # general tool 10 needs a parameter + icon & cursor depends on it => not defined here
-general_tool[11]=9,9,9,ï½§
+general_tool[11]=9,9,9,§
 # general tools 12...22 will get their content from other entries; but we must define so defaults
 # define the cursor for schedule tools
 general_tool[12]=,10

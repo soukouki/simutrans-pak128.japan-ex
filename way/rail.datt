@@ -1,10 +1,10 @@
 ---
 
-# é‰„é“è»Œé“å…¨èˆ¬(ä½µç”¨è»Œé“ã‚’å«ã‚€)
+# “S“¹‹O“¹‘S”Ê(•¹—p‹O“¹‚ğŠÜ‚Ş)
 %resource 'track'
 
 obj=way
-%%addon excel!('addon') == 'å«'
+%%addon excel!('addon') == 'ŠÜ'
 
 %%ja excel!('japanese')
 %%en excel!('english')
@@ -15,7 +15,7 @@ obj=way
 
 intro_year=#{intro_year_}
 intro_month=#{excel('intro_month') || 1}
-# å¼•é€€ã‚’è¨­å®šã™ã‚‹ã¨ã€å¼•é€€å¾Œã«ç·šè·¯ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆãŒè¡Œã‚ã‚Œã‚‹ã¨ã€åˆ¥ã®ç¨®é¡ã®ç·šè·¯ã«ç½®ãæ›ãˆã‚‰ã‚Œã¦ã—ã¾ã†ã€‚ãªã®ã§ã€ãã®å¯¾ç­–ã¨ã—ã¦åŸºæœ¬çš„ã«å¼•é€€ã¯ã•ã›ãªã„ã“ã¨ã«ã—ãŸã€‚
+# ˆø‘Ş‚ğİ’è‚·‚é‚ÆAˆø‘ŞŒã‚Éü˜H‚ÌƒAƒbƒvƒf[ƒg‚ªs‚í‚ê‚é‚ÆA•Ê‚Ìí—Ş‚Ìü˜H‚É’u‚«Š·‚¦‚ç‚ê‚Ä‚µ‚Ü‚¤B‚È‚Ì‚ÅA‚»‚Ì‘Îô‚Æ‚µ‚ÄŠî–{“I‚Éˆø‘Ş‚Í‚³‚¹‚È‚¢‚±‚Æ‚É‚µ‚½B
 retire_year=#{excel('retire_year') || 9999}
 retire_month=#{excel('retire_month') || 1}
 
@@ -26,16 +26,16 @@ waytype=#{excel!('waytype')}
 
 %%def :cost_, (0.7*(1.48*topspeed_**2 + 359*topspeed_) + 0.3*(199*max_weight_**2 + 1267*max_weight_))
 cost=#{(cost_ * (excel('cost_coefficient') || 1)).round}
-# Pak128.Britain-Exã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’è¦‹ãŸã¨ã“ã‚ã€ç¶­æŒè²»ã«ã¤ã„ã¦è¦å‰‡æ€§ã‚’èª­ã¿å–ã‚Œãªã‹ã£ãŸã€‚ã™ã¹ã¦åŒã˜å€¤ã‚’è¨­å®šã™ã‚‹ã“ã¨ã«ã—ãŸã€‚
+# Pak128.Britain-Ex‚Ìƒpƒ‰ƒ[ƒ^‚ğŒ©‚½‚Æ‚±‚ëAˆÛ”ï‚É‚Â‚¢‚Ä‹K‘¥«‚ğ“Ç‚İæ‚ê‚È‚©‚Á‚½B‚·‚×‚Ä“¯‚¶’l‚ğİ’è‚·‚é‚±‚Æ‚É‚µ‚½B
 maintenance=#{(500 * (excel('maintenance_coefficient') || 1)).round}
 %%def :wear_capacity_, [(0.3*cost_**2 - 1000*cost_), 5000000000].min
 wear_capacity=#{(wear_capacity_ * (excel('wear_coefficient') || 1).round)}
 
-%%def :gauge, excel('gauge') || 'ã™ã¹ã¦'
-# æœ¬ä½“ã®ã‚³ãƒ¼ãƒ‰ã‚’èª­ã‚“ã ã¨ã“ã‚ã€255ã‚’æŒ‡å®šã™ã‚‹ã¨ç„¡è¦–ã•ã‚Œã‚‹ã“ã¨ãŒåˆ†ã‹ã£ãŸã€‚ä»Šå›ã¯ç„¡è¦–ã—ãŸã„ã®ã§ã€255ã‚’è¨­å®šã™ã‚‹ã€‚
-way_constraint_permissive[0]=#{gauge == 'ã™ã¹ã¦' || gauge == '762mm'  ? 0 : 255}
-way_constraint_permissive[1]=#{gauge == 'ã™ã¹ã¦' || gauge == '1067mm' ? 1 : 255}
-way_constraint_permissive[2]=#{gauge == 'ã™ã¹ã¦' || gauge == '1372mm' ? 2 : 255}
-way_constraint_permissive[3]=#{gauge == 'ã™ã¹ã¦' || gauge == '1435mm' ? 3 : 255}
+%%def :gauge, excel('gauge') || '‚·‚×‚Ä'
+# –{‘Ì‚ÌƒR[ƒh‚ğ“Ç‚ñ‚¾‚Æ‚±‚ëA255‚ğw’è‚·‚é‚Æ–³‹‚³‚ê‚é‚±‚Æ‚ª•ª‚©‚Á‚½B¡‰ñ‚Í–³‹‚µ‚½‚¢‚Ì‚ÅA255‚ğİ’è‚·‚éB
+way_constraint_permissive[0]=#{gauge == '‚·‚×‚Ä' || gauge == '762mm'  ? 0 : 255}
+way_constraint_permissive[1]=#{gauge == '‚·‚×‚Ä' || gauge == '1067mm' ? 1 : 255}
+way_constraint_permissive[2]=#{gauge == '‚·‚×‚Ä' || gauge == '1372mm' ? 2 : 255}
+way_constraint_permissive[3]=#{gauge == '‚·‚×‚Ä' || gauge == '1435mm' ? 3 : 255}
 
 ---

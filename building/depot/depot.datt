@@ -9,7 +9,7 @@ type=depot
 
 %include 'building'
 
-%%def :allow_underground_, {"Âú∞‰∏ä„ÅÆ„Åø" => 0, "Âú∞‰∏ã„ÅÆ„Åø" => 1, "Âú∞‰∏ä„ÉªÂú∞‰∏ã" => 2}[excel('allow_underground') || 'Âú∞‰∏ä„ÅÆ„Åø']
+%%def :allow_underground_, {"ínè„ÇÃÇ›" => 0, "ínâ∫ÇÃÇ›" => 1, "ínè„ÅEínâ∫" => 2}[excel('allow_underground') || 'ínè„ÇÃÇ›']
 allow_underground=#{allow_underground_}
 
 noconstruction=1

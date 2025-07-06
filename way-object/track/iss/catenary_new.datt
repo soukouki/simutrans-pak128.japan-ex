@@ -1,4 +1,4 @@
-# @text ja:æ¶ç·šï¼ˆå˜ã€æ–°æç”»ä½ç½®ï¼‰
+# @text ja:‰Ëüi’PAV•`‰æˆÊ’uj
 # @text en:Catenary (single, new position)
 obj=way-object
 name=iss_ot_new_position_catenary_single
@@ -71,7 +71,7 @@ backimage[nsw]=catenary_new_single_rear.3.2,-64,-28
 backimage[sew]=catenary_new_single_rear.3.3,-64,-28
 backimage[nsew]=catenary_new_single_rear.3.4,-64,-28
 ---
-# @text ja:æ¶ç·šï¼ˆå‰ã€æ–°æç”»ä½ç½®ï¼‰
+# @text ja:‰Ëüi‘OAV•`‰æˆÊ’uj
 # @text en:Catenary (front, new position)
 obj=way-object
 name=iss_ot_new_position_catenary_front
@@ -136,7 +136,7 @@ backimage[nsw]=catenary_new_single_rear.3.2,-64,-28
 backimage[sew]=catenary_new_single_rear.3.3,-64,-28
 backimage[nsew]=catenary_new_single_rear.3.4,-64,-28
 ---
-# @text ja:æ¶ç·šï¼ˆä¸­ã€æ–°æç”»ä½ç½®ï¼‰
+# @text ja:‰Ëüi’†AV•`‰æˆÊ’uj
 # @text en:Catenary (center, new position)
 obj=way-object
 name=iss_ot_new_position_catenary_center
@@ -201,7 +201,7 @@ backimage[nsw]=catenary_new_single_rear.3.2,-64,-28
 backimage[sew]=catenary_new_single_rear.3.3,-64,-28
 backimage[nsew]=catenary_new_single_rear.3.4,-64,-28
 ---
-# @text ja:æ¶ç·šï¼ˆå¾Œã€æ–°æç”»ä½ç½®ï¼‰
+# @text ja:‰ËüiŒãAV•`‰æˆÊ’uj
 # @text en:Catenary (back, new position)
 obj=way-object
 name=iss_ot_new_position_catenary_back
@@ -266,7 +266,7 @@ backimage[nsw]=catenary_new_single_rear.3.2,-64,-28
 backimage[sew]=catenary_new_single_rear.3.3,-64,-28
 backimage[nsew]=catenary_new_single_rear.3.4,-64,-28
 ---
-# @text ja:æ¶ç·šï¼ˆæ¶ç·šæŸ±ç„¡ã—ã€æ–°æç”»ä½ç½®ï¼‰
+# @text ja:‰Ëüi‰Ëü’Œ–³‚µAV•`‰æˆÊ’uj
 # @text en:Catenary (without pier, new position)
 obj=way-object
 name=iss_ot_new_position_catenary

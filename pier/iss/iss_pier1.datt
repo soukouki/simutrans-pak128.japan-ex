@@ -34,7 +34,7 @@ backimage[28][2][0]=./images/pier1.5.2,-64,-96
 backimage[28][3][0]=./images/pier1.5.3,-64,-96
 
 ---
-# @text ja:[æ©‹è„šãƒ‘ãƒ¼ãƒ„] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š1 å¯¾è§’
+# @text ja:[‹´‹rƒp[ƒc] ƒRƒ“ƒNƒŠ[ƒg‹´‹r1 ‘ÎŠp
 # @text en:[Pier parts] Concrete Pier 1 Diagonal
 name=iss_pier1_diag
 %include 'pier'
@@ -68,7 +68,7 @@ backimage[28][2][0]=./images/pier1-diag.5.2,-64,-96
 backimage[28][3][0]=./images/pier1-diag.5.3,-64,-96
 
 ---
-# @text ja:[æ©‹è„šãƒ‘ãƒ¼ãƒ„] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š1 é«˜æ¶
+# @text ja:[‹´‹rƒp[ƒc] ƒRƒ“ƒNƒŠ[ƒg‹´‹r1 ‚‰Ë
 # @text en:[Pier parts] Concrete Pier 1 Deck
 name=iss_pier1_deck
 %include 'pier'
@@ -77,7 +77,7 @@ name=iss_pier1_deck
 icon=> ./images/pier1-deck.0.0
 cursor=./images/pier1-deck.0.1,-64,-64
 
-#è‡ªå‹•è¨­ç½®ç”¨ã‚¢ã‚¤ã‚³ãƒ³ã¨ã‚«ãƒ¼ã‚½ãƒ«
+#©“®İ’u—pƒAƒCƒRƒ“‚ÆƒJ[ƒ\ƒ‹
 backimage[80][0][0]=> ./images/pier1-deck.0.0
 backimage[79][0][0]=./images/pier1-deck.0.1,-64,-64
 
@@ -107,7 +107,7 @@ backimage[28][2][0]=./images/pier1-deck.5.2,-64,-96
 backimage[28][3][0]=./images/pier1-deck.5.3,-64,-96
 
 ---
-# @text ja:[æ©‹è„šãƒ‘ãƒ¼ãƒ„] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š1 é«˜æ¶ [å¯¾è§’]
+# @text ja:[‹´‹rƒp[ƒc] ƒRƒ“ƒNƒŠ[ƒg‹´‹r1 ‚‰Ë [‘ÎŠp]
 # @text en:[Pier parts] Concrete Pier 1 Deck
 name=iss_pier1_deck_diag
 %include 'pier'
@@ -142,7 +142,7 @@ backimage[28][2][0]=./images/pier1-deck-diag.5.2,-64,-96
 backimage[28][3][0]=./images/pier1-deck-diag.5.3,-64,-96
 
 ---
-# @text ja:[æ©‹è„šãƒ‘ãƒ¼ãƒ„] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š1 é«˜æ¶ã‚µãƒãƒ¼ãƒˆ
+# @text ja:[‹´‹rƒp[ƒc] ƒRƒ“ƒNƒŠ[ƒg‹´‹r1 ‚‰ËƒTƒ|[ƒg
 # @text en:[Pier parts] Concrete Pier 1 Deck support
 name=iss_pier1_base
 %include 'pier'
@@ -177,7 +177,7 @@ backimage[28][2][0]=./images/pier1-base.5.2,-64,-96
 backimage[28][3][0]=./images/pier1-base.5.3,-64,-96
 
 ---
-# @text ja:[æ©‹è„šãƒ‘ãƒ¼ãƒ„] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆæ©‹è„š1 é«˜æ¶ã‚µãƒãƒ¼ãƒˆ [å¯¾è§’]
+# @text ja:[‹´‹rƒp[ƒc] ƒRƒ“ƒNƒŠ[ƒg‹´‹r1 ‚‰ËƒTƒ|[ƒg [‘ÎŠp]
 # @text en:[Pier parts] Concrete Pier 1 Deck support
 name=iss_pier1_base_diag
 %include 'pier'

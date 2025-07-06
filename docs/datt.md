@@ -1,160 +1,160 @@
 # datt.rb
 
-datt.rbは、元々wa-st氏が作成した、datファイルの重複部分を書きやすくするためのスクリプトです。これをsou7が改良し、機能を追加しました。
+datt.rb�́A���Xwa-st�����쐬�����Adat�t�@�C���̏d�������������₷�����邽�߂̃X�N���v�g�ł��B�����sou7�����ǂ��A�@�\��ǉ����܂����B
 
-## 使い方
+## �g����
 
-基本的に、元のdatファイルの拡張子をdattに変更するだけで使用できます。`abc=xyz`のような代入や、`---`のような区切り、コメント行はそのまま使用できます。
+��{�I�ɁA����dat�t�@�C���̊g���q��datt�ɕύX���邾���Ŏg�p�ł��܂��B`abc=xyz`�̂悤�ȑ����A`---`�̂悤�ȋ�؂�A�R�����g�s�͂��̂܂܎g�p�ł��܂��B
 
-dattファイルでは、その他にリソース・ディレクティブ・マクロ展開・Excel読み込みなどの機能が追加されています。これらの機能を活用して、datファイルの重複部分を効率的に管理したり、Excelファイルからパラメータを読み込んだりできます。
+datt�t�@�C���ł́A���̑��Ƀ��\�[�X�E�f�B���N�e�B�u�E�}�N���W�J�EExcel�ǂݍ��݂Ȃǂ̋@�\���ǉ�����Ă��܂��B�����̋@�\�����p���āAdat�t�@�C���̏d�������������I�ɊǗ�������AExcel�t�@�C������p�����[�^��ǂݍ��񂾂�ł��܂��B
 
-### ブロック
+### �u���b�N
 
-`---`のような`-`で始まる行で区切られた複数行をブロックと呼びます。例えば、以下のようなdattファイルは3つのブロックに分かれます。
+`---`�̂悤��`-`�Ŏn�܂�s�ŋ�؂�ꂽ�����s���u���b�N�ƌĂт܂��B�Ⴆ�΁A�ȉ��̂悤��datt�t�@�C����3�̃u���b�N�ɕ�����܂��B
 
 ```
-# ここは1つ目のブロック
+# ������1�ڂ̃u���b�N
 ---
-# ここは2つ目のブロック
+# ������2�ڂ̃u���b�N
 ---
-# ここは3つ目のブロック
+# ������3�ڂ̃u���b�N
 ```
 
-### リソース
+### ���\�[�X
 
-datの重複部分を管理するために、リソースと呼ばれる機能があります。
+dat�̏d���������Ǘ����邽�߂ɁA���\�[�X�ƌĂ΂��@�\������܂��B
 
-特定のブロックをリソースAとして定義し、他のブロックBでそのリソースAを取り込めます。取り込むことで、リソースAに含まれるパラメータの設定をブロックBにコピーします。これにより、同じパラメータを複数のブロックで使い回せるようになります。
+����̃u���b�N�����\�[�XA�Ƃ��Ē�`���A���̃u���b�NB�ł��̃��\�[�XA����荞�߂܂��B��荞�ނ��ƂŁA���\�[�XA�Ɋ܂܂��p�����[�^�̐ݒ���u���b�NB�ɃR�s�[���܂��B����ɂ��A�����p�����[�^�𕡐��̃u���b�N�Ŏg���񂹂�悤�ɂȂ�܂��B
 
-このリソースの展開は多段階にすることができ、リソースの中で更に他のリソースを参照することも出来ます。
+���̃��\�[�X�̓W�J�͑��i�K�ɂ��邱�Ƃ��ł��A���\�[�X�̒��ōX�ɑ��̃��\�[�X���Q�Ƃ��邱�Ƃ��o���܂��B
 
-### ディレクティブ
+### �f�B���N�e�B�u
 
-`%`から始まる行はディレクティブとして扱われます。`%`が2つ以上続く場合は、後に説明する遅延ディレクティブになります。
+`%`����n�܂�s�̓f�B���N�e�B�u�Ƃ��Ĉ����܂��B`%`��2�ȏ㑱���ꍇ�́A��ɐ�������x���f�B���N�e�B�u�ɂȂ�܂��B
 
-`%command arg1, args2, ...`の形式でコマンドと引数を指定します。コマンドは以下のようなものがあります。
+`%command arg1, args2, ...`�̌`���ŃR�}���h�ƈ������w�肵�܂��B�R�}���h�͈ȉ��̂悤�Ȃ��̂�����܂��B
 
 - `autoname`
-  - image属性と、level属性から適当に名前を決定します。
-  - JPEXでは使っていません。
+  - image�����ƁAlevel��������K���ɖ��O�����肵�܂��B
+  - JPEX�ł͎g���Ă��܂���B
 - `buil_image`
-  - タイル画像用のdatを出力します。
-  - JPEXでは使っていません。
+  - �^�C���摜�p��dat���o�͂��܂��B
+  - JPEX�ł͎g���Ă��܂���B
 - `require`
-  - 別のdattファイルを読み込みます。
-  - pakを定義するブロックが書いてあるファイルから、リソースを定義しているファイルを読み込むために使います。
-  - 例 : `%require 'path/to/file.datt'`
+  - �ʂ�datt�t�@�C����ǂݍ��݂܂��B
+  - pak���`����u���b�N�������Ă���t�@�C������A���\�[�X���`���Ă���t�@�C����ǂݍ��ނ��߂Ɏg���܂��B
+  - �� : `%require 'path/to/file.datt'`
 - `include`
-  - リソースを取り込みます。
-  - 例 : `%include 'resource_name'`
+  - ���\�[�X����荞�݂܂��B
+  - �� : `%include 'resource_name'`
 - `require_excel`
-  - Excelファイルを読み込みます。`require_excel`で読み込んだExcelのパラメータは、後に説明する`excel`関数を使って参照出来るようになります。
-  - 例 : `%require_excel 'path/to/file.xlsx'`
+  - Excel�t�@�C����ǂݍ��݂܂��B`require_excel`�œǂݍ���Excel�̃p�����[�^�́A��ɐ�������`excel`�֐����g���ĎQ�Əo����悤�ɂȂ�܂��B
+  - �� : `%require_excel 'path/to/file.xlsx'`
 - `addon`
-  - 現在のアドオンを追加するかどうかを指定します。
-  - 例 : `%addon false`
+  - ���݂̃A�h�I����ǉ����邩�ǂ������w�肵�܂��B
+  - �� : `%addon false`
 - `def`
-  - 定数を定義します。定義した値は、マクロ展開や他の定数の定義に利用できます。
-  - 例 : `%def :constant_name, 1234`
+  - �萔���`���܂��B��`�����l�́A�}�N���W�J�⑼�̒萔�̒�`�ɗ��p�ł��܂��B
+  - �� : `%def :constant_name, 1234`
 - `undef`
-  - 定数・パラメータの設定を削除します。
-  - JPEXでは使っていません。
+  - �萔�E�p�����[�^�̐ݒ���폜���܂��B
+  - JPEX�ł͎g���Ă��܂���B
 - `resource`
-  - 現在のブロックをリソースとして定義します。
-  - 例 : `%resource 'resource_name'`
+  - ���݂̃u���b�N�����\�[�X�Ƃ��Ē�`���܂��B
+  - �� : `%resource 'resource_name'`
 - `ja`
-  - jatabファイルを出力します。
-  - 例 : `%ja 'サンプルpak'`
+  - jatab�t�@�C�����o�͂��܂��B
+  - �� : `%ja '�T���v��pak'`
 - `en`
-  - entabファイルを出力します
-  - 例 : `%en 'Sample pak'`
+  - entab�t�@�C�����o�͂��܂�
+  - �� : `%en 'Sample pak'`
 - `require_ruby`
-  - Rubyファイルを読み込みます。
-  - 例 : `%require_ruby 'path/to/file.rb'`
+  - Ruby�t�@�C����ǂݍ��݂܂��B
+  - �� : `%require_ruby 'path/to/file.rb'`
 - `lines`
-  - 入力された文字列を行単位に分解して、linesに追加します。
-  - 例 : `%lines "abc[0]=123\nabc[1]=456\nabc[2]=789"`
+  - ���͂��ꂽ��������s�P�ʂɕ������āAlines�ɒǉ����܂��B
+  - �� : `%lines "abc[0]=123\nabc[1]=456\nabc[2]=789"`
 
-### マクロ展開
+### �}�N���W�J
 
-代入では、右辺左辺問わずマクロ展開が可能です。マクロは`#{`で始まり、`}`で終わります。マクロはRubyのコードとして実行され、結果が展開されます。
+����ł́A�E�Ӎ��Ӗ�킸�}�N���W�J���\�ł��B�}�N����`#{`�Ŏn�܂�A`}`�ŏI���܂��B�}�N����Ruby�̃R�[�h�Ƃ��Ď��s����A���ʂ��W�J����܂��B
 
-例えば、
+�Ⴆ�΁A
 ```
 abc=#{1 + 2}
 ```
-というdattファイルがあると、datファイルは
+�Ƃ���datt�t�@�C��������ƁAdat�t�@�C����
 ```
 abc=3
 ```
-のように展開されます。
+�̂悤�ɓW�J����܂��B
 
-`%def`ディレクティブで定義した定数をマクロ展開で利用できます。例えば
+`%def`�f�B���N�e�B�u�Œ�`�����萔���}�N���W�J�ŗ��p�ł��܂��B�Ⴆ��
 
 ```
 %def :constant_name, 1234
 abc=#{:constant_name}
 ```
-とすると、datファイルは
+�Ƃ���ƁAdat�t�@�C����
 ```
 abc=1234
 ```
-のように展開されます。
+�̂悤�ɓW�J����܂��B
 
-また、代入パラメータを読み込むことも出来ます。例えば
+�܂��A����p�����[�^��ǂݍ��ނ��Ƃ��o���܂��B�Ⴆ��
 ```
 value=xyz
 sample=#{'a_' + value + '_b'}
 ```
-とすると、datファイルは
+�Ƃ���ƁAdat�t�@�C����
 ```
 sample=a_xyz_b
 ```
-のように展開されます。
+�̂悤�ɓW�J����܂��B
 
-マクロ展開で利用できるdatt.rb特有の関数は以下のとおりです。
+�}�N���W�J�ŗ��p�ł���datt.rb���L�̊֐��͈ȉ��̂Ƃ���ł��B
 
 - `img`
-  - image属性からの相対指定。
-  - JPEXでは使っていません。
+  - image��������̑��Ύw��B
+  - JPEX�ł͎g���Ă��܂���B
 - `excel`
-  - Excelファイルから読み込んだパラメータを参照します。
-  - Excelファイルの当該セルが空の場合は、nilが帰ります。
-  - 例 : `#{excel('sample_value')}`
-  - 例 : `#{excel('sample_value') || 'default_value'}`
+  - Excel�t�@�C������ǂݍ��񂾃p�����[�^���Q�Ƃ��܂��B
+  - Excel�t�@�C���̓��Y�Z������̏ꍇ�́Anil���A��܂��B
+  - �� : `#{excel('sample_value')}`
+  - �� : `#{excel('sample_value') || 'default_value'}`
 - `excel!`
-  - Excelファイルから読み込んだパラメータを参照します。
-  - Excelファイルの当該セルが空の場合は、例外が発生します。
-  - 例 : `#{excel!('sample_value')}`
+  - Excel�t�@�C������ǂݍ��񂾃p�����[�^���Q�Ƃ��܂��B
+  - Excel�t�@�C���̓��Y�Z������̏ꍇ�́A��O���������܂��B
+  - �� : `#{excel!('sample_value')}`
 
-### 遅延ディレクティブ
+### �x���f�B���N�e�B�u
 
-`%`が2つ以上続く行は遅延ディレクティブとして扱われます。遅延ディレクティブは、そのファイルが読み込まれたときに評価されるのではなく、`%include`ディレクティブによって取り込まれたときに、`%`を1つ外して評価されます。`%`が2つの場合は、最初の取り込み後に評価されます。`%`が3つの場合は、`%include`が多重に行われたときの2回目の取り込み後に評価されます。
+`%`��2�ȏ㑱���s�͒x���f�B���N�e�B�u�Ƃ��Ĉ����܂��B�x���f�B���N�e�B�u�́A���̃t�@�C�����ǂݍ��܂ꂽ�Ƃ��ɕ]�������̂ł͂Ȃ��A`%include`�f�B���N�e�B�u�ɂ���Ď�荞�܂ꂽ�Ƃ��ɁA`%`��1�O���ĕ]������܂��B`%`��2�̏ꍇ�́A�ŏ��̎�荞�݌�ɕ]������܂��B`%`��3�̏ꍇ�́A`%include`�����d�ɍs��ꂽ�Ƃ���2��ڂ̎�荞�݌�ɕ]������܂��B
 
-### Excel連携
+### Excel�A�g
 
-`%require_excel`ディレクティブでExcelファイルを読みこむと、その中のparametersシートの内容を読み込みます。parametersシートは以下の形式に沿っている必要があります。
+`%require_excel`�f�B���N�e�B�u��Excel�t�@�C����ǂ݂��ނƁA���̒���parameters�V�[�g�̓��e��ǂݍ��݂܂��Bparameters�V�[�g�͈ȉ��̌`���ɉ����Ă���K�v������܂��B
 
-- 1行目はヘッダー行で、各列の名前を指定します。
-- 2行目は無視されます。値の説明を書くために使います。
-- 1行目の`name`が入っている列は、各pakファイルの名前となります。
+- 1�s�ڂ̓w�b�_�[�s�ŁA�e��̖��O���w�肵�܂��B
+- 2�s�ڂ͖�������܂��B�l�̐������������߂Ɏg���܂��B
+- 1�s�ڂ�`name`�������Ă����́A�epak�t�@�C���̖��O�ƂȂ�܂��B
 
 |value1|name|value2|...|
 |---|---|---|---|
 |1|sample1|aaa|...|
 |2|sample2|bbb|...|
 
-`name=sample1`のが定義されたブロックにおいて`excel('value1')`を実行すると、`name`の列が`sample1`の行の中から、`value1`の列のセルの値を取得します。今回であれば2が取得されます。
+`name=sample1`�̂���`���ꂽ�u���b�N�ɂ�����`excel('value1')`�����s����ƁA`name`�̗�`sample1`�̍s�̒�����A`value1`�̗�̃Z���̒l���擾���܂��B����ł����2���擾����܂��B
 
-`excel`関数は、Excelファイルのセルの値が空の場合には`nil`を返します。デフォルト値を設定する場合には、`excel('value1') || 'default_value'`のように書くことができます。
+`excel`�֐��́AExcel�t�@�C���̃Z���̒l����̏ꍇ�ɂ�`nil`��Ԃ��܂��B�f�t�H���g�l��ݒ肷��ꍇ�ɂ́A`excel('value1') || 'default_value'`�̂悤�ɏ������Ƃ��ł��܂��B
 
-`excel!`関数は、Excelファイルのセルの値が空の場合に例外を発生させます。例外を発生させてエラーを出すことで、ミスを早期に発見できます。
+`excel!`�֐��́AExcel�t�@�C���̃Z���̒l����̏ꍇ�ɗ�O�𔭐������܂��B��O�𔭐������ăG���[���o�����ƂŁA�~�X�𑁊��ɔ����ł��܂��B
 
-## 作業の流れ
+## ��Ƃ̗���
 
-1. リソースを定義するdattファイルAを作成します。
-2. datファイルの拡張子をdattに変更し、dattファイルBを作成します。
-3. Excelファイルに必要な情報を入力します。
-4. dattファイルBの中で、`%require`ディレクティブを使ってdattファイルAを読み込ませます。
-5. dattファイルBの中で、`%include`ディレクティブを使って、dattファイルAで定義したリソースを取り込みます。
-6. dattファイルBの不要になったパラメータ設定を削除します。
+1. ���\�[�X���`����datt�t�@�C��A���쐬���܂��B
+2. dat�t�@�C���̊g���q��datt�ɕύX���Adatt�t�@�C��B���쐬���܂��B
+3. Excel�t�@�C���ɕK�v�ȏ�����͂��܂��B
+4. datt�t�@�C��B�̒��ŁA`%require`�f�B���N�e�B�u���g����datt�t�@�C��A��ǂݍ��܂��܂��B
+5. datt�t�@�C��B�̒��ŁA`%include`�f�B���N�e�B�u���g���āAdatt�t�@�C��A�Œ�`�������\�[�X����荞�݂܂��B
+6. datt�t�@�C��B�̕s�v�ɂȂ����p�����[�^�ݒ���폜���܂��B

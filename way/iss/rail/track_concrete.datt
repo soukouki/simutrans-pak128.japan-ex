@@ -1,7 +1,7 @@
 %require '../../rail.datt'
 %require_excel '../../rail.xlsx'
 ---
-# @text ja:[åœ°ä¸Š] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆã¾ãã‚‰ãè»Œé“ï¼ˆå˜ï¼‰
+# @text ja:[’nã] ƒRƒ“ƒNƒŠ[ƒg‚Ü‚­‚ç‚¬‹O“¹i’Pj
 # @text en:[Ground] Concrete tie track (single)
 name=iss_wtg_0240_single
 copyright=128na
@@ -47,7 +47,7 @@ image[nsw2][0]=standard_concrete_g_single.5.7,-64,-32
 image[sew2][0]=standard_concrete_g_single.5.8,-64,-32
 image[nsew2][0]=standard_concrete_g_single.5.9,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆã¾ãã‚‰ãè»Œé“ï¼ˆå‰ï¼‰
+# @text ja:[’nã] ƒRƒ“ƒNƒŠ[ƒg‚Ü‚­‚ç‚¬‹O“¹i‘Oj
 # @text en:[Ground] Concrete tie track (front)
 name=iss_wtg_0240_front
 copyright=128na
@@ -93,7 +93,7 @@ image[nsw2][0]=standard_concrete_g_front.5.2,-64,-32
 image[sew2][0]=standard_concrete_g_front.5.3,-64,-32
 image[nsew2][0]=standard_concrete_g_front.5.4,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆã¾ãã‚‰ãè»Œé“ï¼ˆä¸­ï¼‰
+# @text ja:[’nã] ƒRƒ“ƒNƒŠ[ƒg‚Ü‚­‚ç‚¬‹O“¹i’†j
 # @text en:[Ground] Concrete tie track (center)
 name=iss_wtg_0240_center
 copyright=128na
@@ -129,7 +129,7 @@ image[nsw][0]=standard_concrete_g_center.3.2,-64,-32
 image[sew][0]=standard_concrete_g_center.3.3,-64,-32
 image[nsew][0]=standard_concrete_g_center.3.4,-64,-32
 ---
-# @text ja:[åœ°ä¸Š] ã‚³ãƒ³ã‚¯ãƒªãƒ¼ãƒˆã¾ãã‚‰ãè»Œé“ï¼ˆå¾Œï¼‰
+# @text ja:[’nã] ƒRƒ“ƒNƒŠ[ƒg‚Ü‚­‚ç‚¬‹O“¹iŒãj
 # @text en:[Ground] Concrete tie track (back)
 name=iss_wtg_0240_back
 copyright=128na
