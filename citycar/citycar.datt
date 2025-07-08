@@ -1,11 +1,11 @@
-ï»¿
+
 %require_excel 'citycar.xlsx'
 ---
 
-# ã‚·ãƒ†ã‚£ãƒ¼ã‚«ãƒ¼
+# ƒVƒeƒB[ƒJ[
 %resource 'citycar'
 
-%%addon excel!('addon') == 'å«'
+%%addon excel!('addon') == 'ŠÜ'
 
 %%ja excel!('japanese')
 %%en excel!('english')
@@ -17,8 +17,8 @@ intro_month=#{excel('intro_month') || 1}
 retire_year=#{excel('retire_year') || 9999}
 retire_month=#{excel('retire_month') || 1}
 
-# Pak128.Britain-Exã‚’è¦‹ã‚‹ã¨ã€1ã‹ã‚‰20ç¨‹åº¦ã®å€¤ã‚’è¨­å®šã—ã¦ã„ãŸã€‚
-# ä¸­ã§ã‚‚5å‰å¾Œã®å€¤ã‚’è¨­å®šã—ã¦ã„ã‚‹ã“ã¨ãŒå¤šã‹ã£ãŸã®ã§ã€ãã‚Œã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¨ã™ã‚‹
+# Pak128.Britain-Ex‚ğŒ©‚é‚ÆA1‚©‚ç20’ö“x‚Ì’l‚ğİ’è‚µ‚Ä‚¢‚½B
+# ’†‚Å‚à5‘OŒã‚Ì’l‚ğİ’è‚µ‚Ä‚¢‚é‚±‚Æ‚ª‘½‚©‚Á‚½‚Ì‚ÅA‚»‚ê‚ğƒfƒtƒHƒ‹ƒg‚Æ‚·‚é
 DistributionWeight=#{excel('distribution_weight') || 5}
 
 speed=#{excel!('speed')}
