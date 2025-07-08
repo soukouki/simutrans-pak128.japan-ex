@@ -1,0 +1,13 @@
+﻿%require '../citycar.datt'
+---
+name=FSS_GDBB4FH
+copyright=AoharaMaika
+%include 'citycar'
+Image[S]=GDBB.0.0
+Image[N]=GDBB.0.1
+Image[E]=GDBB.0.2
+Image[W]=GDBB.0.3
+Image[SE]=GDBB.0.4
+Image[NW]=GDBB.0.5
+Image[NE]=GDBB.0.6
+Image[SW]=GDBB.0.7
