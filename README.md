@@ -1,5 +1,5 @@
 
-# Pak128.Japan-Ex+Addons
+# Pak128.Japan-Ex
 
 ## Japanese
 
